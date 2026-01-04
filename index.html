@@ -225,7 +225,7 @@
                 const stats = data[symbol];
                 const netNtl = stats.netRemainingNtl;
                 const numTwaps = stats.numActiveTwaps;
-                const direction = netNtl > 0 ? 'NET SELLING' : netNtl < 0 ? 'NET BUYING' : 'BALANCED';
+                const direction = netNtl < 0 ? 'NET SELLING' : netNtl > 0 ? 'NET BUYING' : 'BALANCED';
                 const directionClass = getValueClass(netNtl);
 
                 html += `
