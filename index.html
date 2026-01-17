@@ -297,6 +297,10 @@
                 const direction = netNtl < 0 ? 'NET SELLING' : netNtl > 0 ? 'NET BUYING' : 'BALANCED';
                 const directionClass = getValueClass(netNtl);
 
+                const liquidity = stats.liquidity50bps;
+                const twapPct = stats.twapPctOfLiquidity;
+                const twapPctClass = twapPct >= 100 ? 'negative' : twapPct >= 50 ? 'neutral' : 'positive';
+
                 html += `
                     <div class="stat-card">
                         <div class="symbol">${symbol.replace('xyz:', '')}</div>
@@ -312,6 +316,18 @@
                             <span class="stat-label">Direction</span>
                             <span class="stat-value ${directionClass}">${direction}</span>
                         </div>
+                        ${liquidity ? `
+                        <div class="stat-row">
+                            <span class="stat-label">Liquidity (50bps)</span>
+                            <span class="stat-value">$${formatNumber(liquidity)}</span>
+                        </div>
+                        ` : ''}
+                        ${twapPct !== undefined ? `
+                        <div class="stat-row">
+                            <span class="stat-label">TWAP % of Liquidity</span>
+                            <span class="stat-value ${twapPctClass}">${twapPct.toFixed(1)}%</span>
+                        </div>
+                        ` : ''}
                     </div>
                 `;
             }
