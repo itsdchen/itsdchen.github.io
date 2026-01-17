@@ -133,6 +133,49 @@
             color: #666;
         }
 
+        .section-header {
+            background: white;
+            padding: 20px 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            margin-bottom: 20px;
+            margin-top: 30px;
+        }
+
+        .section-header h2 {
+            color: #f59e0b;
+            margin-bottom: 5px;
+            font-size: 20px;
+        }
+
+        .section-header .section-subtitle {
+            color: #888;
+            font-size: 13px;
+        }
+
+        .premium-card {
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            border-left: 4px solid #f59e0b;
+        }
+
+        .premium-card .symbol {
+            color: #f59e0b;
+        }
+
+        .premium-value {
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+        .premium-details {
+            font-size: 12px;
+            color: #888;
+            margin-top: 5px;
+        }
+
         @media (max-width: 768px) {
             .stats-grid {
                 grid-template-columns: 1fr;
@@ -157,6 +200,8 @@
         <div id="content">
             <div class="loading">Loading TWAP data...</div>
         </div>
+
+        <div id="weekendPremiums"></div>
     </div>
 
     <script>
@@ -188,6 +233,7 @@
                 const rawData = await response.json();
                 const normalized = normalizePayload(rawData);
                 displayData(normalized.twapData);
+                displayWeekendPremiums(normalized.weekendPremiums);
                 updateLastUpdate(normalized.lastUpdated);
 
             } catch (error) {
@@ -204,21 +250,23 @@
 
         function normalizePayload(payload) {
             if (!payload || typeof payload !== 'object') {
-                return { twapData: null, lastUpdated: null };
+                return { twapData: null, lastUpdated: null, weekendPremiums: null };
             }
 
             if (payload.hasOwnProperty('twaps')) {
                 return {
                     twapData: payload.twaps || {},
                     lastUpdated: payload.lastUpdated || null,
+                    weekendPremiums: payload.weekendPremiums || null,
                 };
             }
 
             // Backward compatibility: assume payload itself is the stats object.
-            const { lastUpdated, ...twapData } = payload;
+            const { lastUpdated, weekendPremiums, _fridayCloseData, ...twapData } = payload;
             return {
                 twapData: twapData,
                 lastUpdated: lastUpdated || null,
+                weekendPremiums: weekendPremiums || null,
             };
         }
 
@@ -270,6 +318,69 @@
 
             html += '</div>';
             content.innerHTML = html;
+        }
+
+        function formatPrice(num) {
+            if (num >= 1000) {
+                return num.toLocaleString(undefined, { minimumFractionDigits: 2, maximumFractionDigits: 2 });
+            }
+            return num.toFixed(4);
+        }
+
+        function formatPremium(pct) {
+            const sign = pct >= 0 ? '+' : '';
+            return sign + pct.toFixed(3) + '%';
+        }
+
+        function displayWeekendPremiums(data) {
+            const container = document.getElementById('weekendPremiums');
+
+            if (!data || !data.isWeekend || !data.symbols || Object.keys(data.symbols).length === 0) {
+                container.innerHTML = '';
+                return;
+            }
+
+            const fridayCloseDate = new Date(data.fridayCloseTime);
+            const fridayCloseStr = fridayCloseDate.toLocaleString();
+
+            let html = `
+                <div class="section-header">
+                    <h2>Weekend Oracle Premium</h2>
+                    <p class="section-subtitle">HL Mark vs Friday Close (${fridayCloseStr} ET)</p>
+                </div>
+                <div class="stats-grid">
+            `;
+
+            // Sort by absolute premium
+            const sortedSymbols = Object.keys(data.symbols).sort((a, b) => {
+                return Math.abs(data.symbols[b].premiumPct) - Math.abs(data.symbols[a].premiumPct);
+            });
+
+            for (const symbol of sortedSymbols) {
+                const info = data.symbols[symbol];
+                const premiumClass = getValueClass(info.premiumPct);
+
+                html += `
+                    <div class="stat-card premium-card">
+                        <div class="symbol">${symbol.replace('xyz:', '')}</div>
+                        <div class="stat-row">
+                            <span class="stat-label">Premium</span>
+                            <span class="stat-value premium-value ${premiumClass}">${formatPremium(info.premiumPct)}</span>
+                        </div>
+                        <div class="stat-row">
+                            <span class="stat-label">Current Mid</span>
+                            <span class="stat-value">${formatPrice(info.currentMid)}</span>
+                        </div>
+                        <div class="stat-row">
+                            <span class="stat-label">Friday Close</span>
+                            <span class="stat-value">${formatPrice(info.fridayClose)}</span>
+                        </div>
+                    </div>
+                `;
+            }
+
+            html += '</div>';
+            container.innerHTML = html;
         }
 
         function updateLastUpdate(timestampString) {
