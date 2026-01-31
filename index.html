@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TWAP Tracker - Hyperliquid</title>
+    <title>TWAP Tracker</title>
     <style>
         * {
             margin: 0;
@@ -12,153 +12,235 @@
         }
 
         body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            font-family: -apple-system, BlinkMacSystemFont, 'Inter', 'Segoe UI', sans-serif;
+            background: #0f1419;
             min-height: 100vh;
-            padding: 20px;
-            color: #333;
+            padding: 24px;
+            color: #e7e9ea;
         }
 
         .container {
-            max-width: 1200px;
+            max-width: 1280px;
             margin: 0 auto;
         }
 
         header {
-            background: white;
-            padding: 30px;
-            border-radius: 10px;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-            margin-bottom: 30px;
+            background: #16202a;
+            padding: 24px 32px;
+            border-radius: 12px;
+            border: 1px solid #2f3940;
+            margin-bottom: 24px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
         }
 
         h1 {
-            color: #667eea;
-            margin-bottom: 10px;
+            color: #e7e9ea;
+            font-size: 22px;
+            font-weight: 600;
+            letter-spacing: -0.02em;
         }
 
         .subtitle {
-            color: #666;
+            color: #71767b;
             font-size: 14px;
+            margin-top: 4px;
         }
 
         .last-update {
-            float: right;
-            color: #888;
-            font-size: 12px;
+            color: #71767b;
+            font-size: 13px;
+            text-align: right;
         }
 
         .stats-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
-            gap: 20px;
-            margin-bottom: 20px;
+            grid-template-columns: repeat(auto-fill, minmax(380px, 1fr));
+            gap: 16px;
+            margin-bottom: 16px;
         }
 
         .stat-card {
-            background: white;
-            padding: 25px;
-            border-radius: 10px;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-            transition: transform 0.2s, box-shadow 0.2s;
+            background: #16202a;
+            padding: 20px 24px;
+            border-radius: 12px;
+            border: 1px solid #2f3940;
+            transition: border-color 0.2s, background 0.2s;
         }
 
         .stat-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+            border-color: #3d4f5f;
+            background: #1a2734;
         }
 
         .symbol {
-            font-size: 24px;
-            font-weight: bold;
-            color: #667eea;
-            margin-bottom: 15px;
-            padding-bottom: 10px;
-            border-bottom: 2px solid #f0f0f0;
+            font-size: 20px;
+            font-weight: 600;
+            color: #e7e9ea;
+            margin-bottom: 16px;
+            padding-bottom: 12px;
+            border-bottom: 1px solid #2f3940;
+            letter-spacing: -0.01em;
         }
 
         .stat-row {
             display: flex;
             justify-content: space-between;
-            padding: 10px 0;
-            border-bottom: 1px solid #f5f5f5;
-        }
-
-        .stat-row:last-child {
-            border-bottom: none;
+            padding: 8px 0;
         }
 
         .stat-label {
-            color: #666;
-            font-size: 14px;
+            color: #71767b;
+            font-size: 13px;
         }
 
         .stat-value {
-            font-weight: bold;
-            font-size: 16px;
+            font-weight: 600;
+            font-size: 14px;
+            color: #e7e9ea;
         }
 
         .positive {
-            color: #10b981;
+            color: #00c853;
         }
 
         .negative {
-            color: #ef4444;
+            color: #ff5252;
         }
 
         .neutral {
-            color: #6b7280;
+            color: #71767b;
         }
 
         .loading {
             text-align: center;
-            padding: 50px;
-            color: white;
-            font-size: 18px;
+            padding: 60px;
+            color: #71767b;
+            font-size: 16px;
         }
 
         .error {
-            background: #fee;
-            color: #c33;
-            padding: 20px;
-            border-radius: 10px;
+            background: rgba(255, 82, 82, 0.1);
+            border: 1px solid rgba(255, 82, 82, 0.3);
+            color: #ff5252;
+            padding: 20px 24px;
+            border-radius: 12px;
             margin: 20px 0;
         }
 
         .no-data {
-            background: white;
-            padding: 40px;
-            border-radius: 10px;
+            background: #16202a;
+            padding: 48px;
+            border-radius: 12px;
+            border: 1px solid #2f3940;
             text-align: center;
-            color: #666;
+            color: #71767b;
+        }
+
+        .no-data h2 {
+            color: #e7e9ea;
+            font-size: 18px;
+            margin-bottom: 8px;
+        }
+
+        .user-list {
+            margin-top: 12px;
+            padding-top: 12px;
+            border-top: 1px solid #2f3940;
+        }
+
+        .user-row {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 8px 0;
+            font-size: 13px;
+        }
+
+        .user-row:not(:last-child) {
+            border-bottom: 1px solid rgba(47, 57, 64, 0.5);
+        }
+
+        .user-info {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .user-side {
+            font-size: 10px;
+            font-weight: 700;
+            padding: 3px 8px;
+            border-radius: 4px;
+            text-transform: uppercase;
+            letter-spacing: 0.03em;
+        }
+
+        .user-side.buy {
+            background: rgba(0, 200, 83, 0.15);
+            color: #00c853;
+        }
+
+        .user-side.sell {
+            background: rgba(255, 82, 82, 0.15);
+            color: #ff5252;
+        }
+
+        .user-ntl {
+            font-weight: 500;
+            color: #e7e9ea;
+        }
+
+        .ghost-link {
+            color: #8b5cf6;
+            text-decoration: none;
+            font-size: 12px;
+            padding: 4px 10px;
+            border: 1px solid #8b5cf6;
+            border-radius: 6px;
+            transition: all 0.2s;
+            font-weight: 500;
+        }
+
+        .ghost-link:hover {
+            background: #8b5cf6;
+            color: #fff;
         }
 
         .section-header {
-            background: white;
-            padding: 20px 30px;
-            border-radius: 10px;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-            margin-bottom: 20px;
-            margin-top: 30px;
+            background: #16202a;
+            padding: 20px 28px;
+            border-radius: 12px;
+            border: 1px solid #2f3940;
+            margin-bottom: 16px;
+            margin-top: 32px;
         }
 
         .section-header h2 {
             color: #f59e0b;
-            margin-bottom: 5px;
-            font-size: 20px;
+            margin-bottom: 4px;
+            font-size: 18px;
+            font-weight: 600;
         }
 
         .section-header .section-subtitle {
-            color: #888;
+            color: #71767b;
             font-size: 13px;
         }
 
         .premium-card {
-            background: white;
-            padding: 20px;
-            border-radius: 10px;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-            border-left: 4px solid #f59e0b;
+            background: #16202a;
+            padding: 20px 24px;
+            border-radius: 12px;
+            border: 1px solid #2f3940;
+            border-left: 3px solid #f59e0b;
+        }
+
+        .premium-card:hover {
+            border-color: #3d4f5f;
+            border-left-color: #f59e0b;
+            background: #1a2734;
         }
 
         .premium-card .symbol {
@@ -166,25 +248,33 @@
         }
 
         .premium-value {
-            font-size: 24px;
-            font-weight: bold;
+            font-size: 22px;
+            font-weight: 700;
         }
 
         .premium-details {
             font-size: 12px;
-            color: #888;
-            margin-top: 5px;
+            color: #71767b;
+            margin-top: 4px;
         }
 
         @media (max-width: 768px) {
+            body {
+                padding: 16px;
+            }
+
             .stats-grid {
                 grid-template-columns: 1fr;
             }
 
+            header {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 12px;
+            }
+
             .last-update {
-                float: none;
-                display: block;
-                margin-top: 10px;
+                text-align: left;
             }
         }
     </style>
@@ -192,8 +282,10 @@
 <body>
     <div class="container">
         <header>
-            <h1>Hyperliquid TWAP Tracker</h1>
-            <p class="subtitle">Real-time monitoring of active TWAP orders</p>
+            <div>
+                <h1>TWAP Tracker</h1>
+                <p class="subtitle">Monitoring active TWAP orders on Hyperliquid</p>
+            </div>
             <div class="last-update" id="lastUpdate">Loading...</div>
         </header>
 
@@ -301,9 +393,33 @@
                 const twapPct = stats.twapPctOfLiquidity;
                 const twapPctClass = twapPct >= 100 ? 'negative' : twapPct >= 50 ? 'neutral' : 'positive';
 
+                // Build user list with ghost links
+                const market = symbol.replace('xyz:', '');
+                let usersHtml = '';
+                if (stats.users && stats.users.length > 0) {
+                    // Sort users by remaining notional (descending)
+                    const sortedUsers = stats.users.sort((a, b) => b.remainingNtl - a.remainingNtl);
+                    usersHtml = '<div class="user-list">';
+                    for (const u of sortedUsers) {
+                        const ghostUrl = `https://app.trade.xyz/?market=${market}&ghost=${u.user}&tab=twap`;
+                        const shortAddr = u.user.slice(0, 6) + '...' + u.user.slice(-4);
+                        const minsLeft = u.remainingMinutes ? ` (~${Math.round(u.remainingMinutes)}m)` : '';
+                        usersHtml += `
+                            <div class="user-row">
+                                <div class="user-info">
+                                    <span class="user-side ${u.side}">${u.side.toUpperCase()}</span>
+                                    <span class="user-ntl">$${formatNumber(u.remainingNtl)}${minsLeft}</span>
+                                </div>
+                                <a href="${ghostUrl}" target="_blank" class="ghost-link" title="${u.user}">👻 ${shortAddr}</a>
+                            </div>
+                        `;
+                    }
+                    usersHtml += '</div>';
+                }
+
                 html += `
                     <div class="stat-card">
-                        <div class="symbol">${symbol.replace('xyz:', '')}</div>
+                        <div class="symbol">${market}</div>
                         <div class="stat-row">
                             <span class="stat-label">Active TWAPs</span>
                             <span class="stat-value">${numTwaps}</span>
@@ -328,6 +444,7 @@
                             <span class="stat-value ${twapPctClass}">${twapPct.toFixed(1)}%</span>
                         </div>
                         ` : ''}
+                        ${usersHtml}
                     </div>
                 `;
             }
