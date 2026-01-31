@@ -13,7 +13,7 @@
 
         body {
             font-family: -apple-system, BlinkMacSystemFont, 'Inter', 'Segoe UI', sans-serif;
-            background: #0f1419;
+            background: #0a0e12;
             min-height: 100vh;
             padding: 24px;
             color: #e7e9ea;
@@ -25,10 +25,10 @@
         }
 
         header {
-            background: #16202a;
-            padding: 24px 32px;
-            border-radius: 12px;
-            border: 1px solid #2f3940;
+            background: linear-gradient(135deg, #141c24 0%, #1a242f 100%);
+            padding: 28px 32px;
+            border-radius: 16px;
+            border: 1px solid #2a3640;
             margin-bottom: 24px;
             display: flex;
             justify-content: space-between;
@@ -37,225 +37,394 @@
 
         h1 {
             color: #e7e9ea;
-            font-size: 22px;
-            font-weight: 600;
-            letter-spacing: -0.02em;
+            font-size: 24px;
+            font-weight: 700;
+            letter-spacing: -0.03em;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        h1::before {
+            content: '';
+            display: inline-block;
+            width: 8px;
+            height: 24px;
+            background: linear-gradient(180deg, #00c853 0%, #00a844 100%);
+            border-radius: 4px;
         }
 
         .subtitle {
-            color: #71767b;
+            color: #6b7280;
             font-size: 14px;
-            margin-top: 4px;
+            margin-top: 6px;
         }
 
         .last-update {
-            color: #71767b;
+            color: #6b7280;
             font-size: 13px;
             text-align: right;
+            display: flex;
+            flex-direction: column;
+            gap: 4px;
+        }
+
+        .update-time {
+            color: #9ca3af;
+            font-weight: 500;
         }
 
         .stats-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(380px, 1fr));
+            grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
             gap: 16px;
             margin-bottom: 16px;
         }
 
         .stat-card {
-            background: #16202a;
-            padding: 20px 24px;
-            border-radius: 12px;
-            border: 1px solid #2f3940;
-            transition: border-color 0.2s, background 0.2s;
+            background: linear-gradient(145deg, #141c24 0%, #111920 100%);
+            padding: 24px;
+            border-radius: 16px;
+            border: 1px solid #232d38;
+            transition: all 0.25s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .stat-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 3px;
+            background: linear-gradient(90deg, #2563eb 0%, #7c3aed 100%);
+            opacity: 0;
+            transition: opacity 0.25s ease;
         }
 
         .stat-card:hover {
-            border-color: #3d4f5f;
-            background: #1a2734;
+            border-color: #3a4754;
+            transform: translateY(-2px);
+        }
+
+        .stat-card:hover::before {
+            opacity: 1;
         }
 
         .symbol {
-            font-size: 20px;
-            font-weight: 600;
-            color: #e7e9ea;
+            font-size: 22px;
+            font-weight: 700;
+            color: #f3f4f6;
             margin-bottom: 16px;
-            padding-bottom: 12px;
-            border-bottom: 1px solid #2f3940;
-            letter-spacing: -0.01em;
+            padding-bottom: 14px;
+            border-bottom: 1px solid #232d38;
+            letter-spacing: -0.02em;
         }
 
         .stat-row {
             display: flex;
             justify-content: space-between;
-            padding: 8px 0;
+            align-items: center;
+            padding: 10px 0;
         }
 
         .stat-label {
-            color: #71767b;
+            color: #6b7280;
             font-size: 13px;
+            font-weight: 500;
         }
 
         .stat-value {
             font-weight: 600;
-            font-size: 14px;
+            font-size: 15px;
             color: #e7e9ea;
         }
 
         .positive {
-            color: #00c853;
+            color: #22c55e;
         }
 
         .negative {
-            color: #ff5252;
+            color: #ef4444;
         }
 
         .neutral {
-            color: #71767b;
+            color: #6b7280;
+        }
+
+        /* Direction badges */
+        .direction-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            padding: 4px 10px;
+            border-radius: 6px;
+            font-size: 12px;
+            font-weight: 600;
+        }
+
+        .direction-badge.buying {
+            background: rgba(34, 197, 94, 0.12);
+            color: #22c55e;
+        }
+
+        .direction-badge.selling {
+            background: rgba(239, 68, 68, 0.12);
+            color: #ef4444;
+        }
+
+        .direction-badge.balanced {
+            background: rgba(107, 114, 128, 0.12);
+            color: #6b7280;
+        }
+
+        /* Liquidity bar */
+        .liquidity-bar {
+            margin-top: 4px;
+            height: 4px;
+            background: #232d38;
+            border-radius: 2px;
+            overflow: hidden;
+        }
+
+        .liquidity-fill {
+            height: 100%;
+            border-radius: 2px;
+            transition: width 0.3s ease;
+        }
+
+        .liquidity-fill.low {
+            background: linear-gradient(90deg, #22c55e 0%, #16a34a 100%);
+        }
+
+        .liquidity-fill.medium {
+            background: linear-gradient(90deg, #eab308 0%, #ca8a04 100%);
+        }
+
+        .liquidity-fill.high {
+            background: linear-gradient(90deg, #ef4444 0%, #dc2626 100%);
         }
 
         .loading {
             text-align: center;
-            padding: 60px;
-            color: #71767b;
+            padding: 80px;
+            color: #6b7280;
             font-size: 16px;
         }
 
+        .loading::after {
+            content: '';
+            display: block;
+            width: 32px;
+            height: 32px;
+            margin: 16px auto 0;
+            border: 3px solid #232d38;
+            border-top-color: #2563eb;
+            border-radius: 50%;
+            animation: spin 1s linear infinite;
+        }
+
+        @keyframes spin {
+            to { transform: rotate(360deg); }
+        }
+
         .error {
-            background: rgba(255, 82, 82, 0.1);
-            border: 1px solid rgba(255, 82, 82, 0.3);
-            color: #ff5252;
+            background: rgba(239, 68, 68, 0.08);
+            border: 1px solid rgba(239, 68, 68, 0.2);
+            color: #fca5a5;
             padding: 20px 24px;
             border-radius: 12px;
             margin: 20px 0;
         }
 
         .no-data {
-            background: #16202a;
-            padding: 48px;
-            border-radius: 12px;
-            border: 1px solid #2f3940;
+            background: linear-gradient(145deg, #141c24 0%, #111920 100%);
+            padding: 64px 48px;
+            border-radius: 16px;
+            border: 1px solid #232d38;
             text-align: center;
-            color: #71767b;
         }
 
         .no-data h2 {
             color: #e7e9ea;
-            font-size: 18px;
+            font-size: 20px;
+            font-weight: 600;
             margin-bottom: 8px;
         }
 
+        .no-data p {
+            color: #6b7280;
+        }
+
         .user-list {
-            margin-top: 12px;
-            padding-top: 12px;
-            border-top: 1px solid #2f3940;
+            margin-top: 16px;
+            padding-top: 14px;
+            border-top: 1px solid #232d38;
+        }
+
+        .user-list-header {
+            font-size: 11px;
+            font-weight: 600;
+            color: #4b5563;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            margin-bottom: 10px;
         }
 
         .user-row {
             display: flex;
             justify-content: space-between;
             align-items: center;
-            padding: 8px 0;
+            padding: 10px 12px;
+            margin: 0 -12px;
+            border-radius: 8px;
             font-size: 13px;
+            transition: background 0.15s ease;
         }
 
-        .user-row:not(:last-child) {
-            border-bottom: 1px solid rgba(47, 57, 64, 0.5);
+        .user-row:hover {
+            background: rgba(37, 99, 235, 0.06);
         }
 
         .user-info {
             display: flex;
             align-items: center;
-            gap: 10px;
+            gap: 12px;
         }
 
         .user-side {
             font-size: 10px;
             font-weight: 700;
-            padding: 3px 8px;
+            padding: 4px 8px;
             border-radius: 4px;
             text-transform: uppercase;
-            letter-spacing: 0.03em;
+            letter-spacing: 0.04em;
+            min-width: 38px;
+            text-align: center;
         }
 
         .user-side.buy {
-            background: rgba(0, 200, 83, 0.15);
-            color: #00c853;
+            background: rgba(34, 197, 94, 0.15);
+            color: #22c55e;
         }
 
         .user-side.sell {
-            background: rgba(255, 82, 82, 0.15);
-            color: #ff5252;
+            background: rgba(239, 68, 68, 0.15);
+            color: #ef4444;
         }
 
         .user-ntl {
-            font-weight: 500;
+            font-weight: 600;
             color: #e7e9ea;
         }
 
+        .user-time {
+            color: #6b7280;
+            font-weight: 400;
+            font-size: 12px;
+        }
+
         .ghost-link {
-            color: #8b5cf6;
+            color: #a78bfa;
             text-decoration: none;
             font-size: 12px;
-            padding: 4px 10px;
-            border: 1px solid #8b5cf6;
+            padding: 5px 12px;
+            background: rgba(167, 139, 250, 0.1);
+            border: 1px solid rgba(167, 139, 250, 0.25);
             border-radius: 6px;
-            transition: all 0.2s;
+            transition: all 0.2s ease;
             font-weight: 500;
+            display: inline-flex;
+            align-items: center;
+            gap: 4px;
         }
 
         .ghost-link:hover {
-            background: #8b5cf6;
-            color: #fff;
+            background: rgba(167, 139, 250, 0.2);
+            border-color: rgba(167, 139, 250, 0.4);
+            color: #c4b5fd;
         }
 
         .section-header {
-            background: #16202a;
+            background: linear-gradient(145deg, #141c24 0%, #111920 100%);
             padding: 20px 28px;
             border-radius: 12px;
-            border: 1px solid #2f3940;
+            border: 1px solid #232d38;
             margin-bottom: 16px;
-            margin-top: 32px;
+            margin-top: 40px;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .section-header::before {
+            content: '';
+            display: block;
+            width: 6px;
+            height: 32px;
+            background: linear-gradient(180deg, #38bdf8 0%, #0ea5e9 100%);
+            border-radius: 3px;
         }
 
         .section-header h2 {
-            color: #f59e0b;
-            margin-bottom: 4px;
+            color: #38bdf8;
+            margin-bottom: 2px;
             font-size: 18px;
             font-weight: 600;
         }
 
         .section-header .section-subtitle {
-            color: #71767b;
+            color: #6b7280;
             font-size: 13px;
         }
 
         .premium-card {
-            background: #16202a;
+            background: linear-gradient(145deg, #141c24 0%, #111920 100%);
             padding: 20px 24px;
             border-radius: 12px;
-            border: 1px solid #2f3940;
-            border-left: 3px solid #f59e0b;
+            border: 1px solid #232d38;
+            border-left: 3px solid #38bdf8;
+            transition: all 0.25s ease;
         }
 
         .premium-card:hover {
-            border-color: #3d4f5f;
-            border-left-color: #f59e0b;
-            background: #1a2734;
+            border-color: #3a4754;
+            border-left-color: #38bdf8;
+            transform: translateY(-2px);
         }
 
         .premium-card .symbol {
-            color: #f59e0b;
+            color: #38bdf8;
         }
 
         .premium-value {
-            font-size: 22px;
+            font-size: 24px;
             font-weight: 700;
         }
 
         .premium-details {
             font-size: 12px;
-            color: #71767b;
+            color: #6b7280;
             margin-top: 4px;
+        }
+
+        /* Footer */
+        footer {
+            margin-top: 48px;
+            padding: 20px;
+            text-align: center;
+            color: #4b5563;
+            font-size: 12px;
+        }
+
+        footer a {
+            color: #6b7280;
+            text-decoration: none;
+        }
+
+        footer a:hover {
+            color: #9ca3af;
         }
 
         @media (max-width: 768px) {
@@ -270,11 +439,15 @@
             header {
                 flex-direction: column;
                 align-items: flex-start;
-                gap: 12px;
+                gap: 16px;
             }
 
             .last-update {
                 text-align: left;
+            }
+
+            .section-header {
+                padding: 16px 20px;
             }
         }
     </style>
@@ -290,10 +463,14 @@
         </header>
 
         <div id="content">
-            <div class="loading">Loading TWAP data...</div>
+            <div class="loading">Loading TWAP data</div>
         </div>
 
         <div id="weekendPremiums"></div>
+
+        <footer>
+            Auto-refreshes every 30s · Data from Hyperliquid
+        </footer>
     </div>
 
     <script>
@@ -303,9 +480,18 @@
             if (Math.abs(num) >= 1000000) {
                 return (num / 1000000).toFixed(2) + 'M';
             } else if (Math.abs(num) >= 1000) {
-                return (num / 1000).toFixed(2) + 'K';
+                return (num / 1000).toFixed(1) + 'K';
             }
-            return num.toFixed(2);
+            return num.toFixed(0);
+        }
+
+        function formatTime(minutes) {
+            if (minutes >= 60) {
+                const hours = Math.floor(minutes / 60);
+                const mins = Math.round(minutes % 60);
+                return mins > 0 ? `${hours}h ${mins}m` : `${hours}h`;
+            }
+            return `${Math.round(minutes)}m`;
         }
 
         function getValueClass(value) {
@@ -386,12 +572,15 @@
                 const stats = data[symbol];
                 const netNtl = stats.netRemainingNtl;
                 const numTwaps = stats.numActiveTwaps;
-                const direction = netNtl < 0 ? 'NET SELLING' : netNtl > 0 ? 'NET BUYING' : 'BALANCED';
-                const directionClass = getValueClass(netNtl);
+                const directionText = netNtl < 0 ? 'Selling' : netNtl > 0 ? 'Buying' : 'Balanced';
+                const directionClass = netNtl < 0 ? 'selling' : netNtl > 0 ? 'buying' : 'balanced';
+                const valueClass = getValueClass(netNtl);
 
                 const liquidity = stats.liquidity50bps;
                 const twapPct = stats.twapPctOfLiquidity;
                 const twapPctClass = twapPct >= 100 ? 'negative' : twapPct >= 50 ? 'neutral' : 'positive';
+                const liquidityBarClass = twapPct >= 100 ? 'high' : twapPct >= 50 ? 'medium' : 'low';
+                const liquidityBarWidth = Math.min(twapPct || 0, 200) / 2; // Cap at 100% width
 
                 // Build user list with ghost links
                 const market = symbol.replace('xyz:', '');
@@ -399,16 +588,17 @@
                 if (stats.users && stats.users.length > 0) {
                     // Sort users by remaining notional (descending)
                     const sortedUsers = stats.users.sort((a, b) => b.remainingNtl - a.remainingNtl);
-                    usersHtml = '<div class="user-list">';
+                    usersHtml = '<div class="user-list"><div class="user-list-header">Active Orders</div>';
                     for (const u of sortedUsers) {
                         const ghostUrl = `https://app.trade.xyz/?market=${market}&ghost=${u.user}&tab=twap`;
                         const shortAddr = u.user.slice(0, 6) + '...' + u.user.slice(-4);
-                        const minsLeft = u.remainingMinutes ? ` (~${Math.round(u.remainingMinutes)}m)` : '';
+                        const minsLeft = u.remainingMinutes ? `<span class="user-time">${formatTime(u.remainingMinutes)}</span>` : '';
                         usersHtml += `
                             <div class="user-row">
                                 <div class="user-info">
                                     <span class="user-side ${u.side}">${u.side.toUpperCase()}</span>
-                                    <span class="user-ntl">$${formatNumber(u.remainingNtl)}${minsLeft}</span>
+                                    <span class="user-ntl">$${formatNumber(u.remainingNtl)}</span>
+                                    ${minsLeft}
                                 </div>
                                 <a href="${ghostUrl}" target="_blank" class="ghost-link" title="${u.user}">👻 ${shortAddr}</a>
                             </div>
@@ -425,23 +615,26 @@
                             <span class="stat-value">${numTwaps}</span>
                         </div>
                         <div class="stat-row">
-                            <span class="stat-label">Net Remaining Notional</span>
-                            <span class="stat-value ${directionClass}">$${formatNumber(netNtl)}</span>
+                            <span class="stat-label">Net Remaining</span>
+                            <span class="stat-value ${valueClass}">$${formatNumber(Math.abs(netNtl))}</span>
                         </div>
                         <div class="stat-row">
                             <span class="stat-label">Direction</span>
-                            <span class="stat-value ${directionClass}">${direction}</span>
+                            <span class="direction-badge ${directionClass}">${directionText}</span>
                         </div>
                         ${liquidity ? `
                         <div class="stat-row">
-                            <span class="stat-label">Liquidity (50bps)</span>
+                            <span class="stat-label">Book Liquidity (50bps)</span>
                             <span class="stat-value">$${formatNumber(liquidity)}</span>
                         </div>
                         ` : ''}
                         ${twapPct !== undefined ? `
                         <div class="stat-row">
-                            <span class="stat-label">TWAP % of Liquidity</span>
+                            <span class="stat-label">TWAP vs Liquidity</span>
                             <span class="stat-value ${twapPctClass}">${twapPct.toFixed(1)}%</span>
+                        </div>
+                        <div class="liquidity-bar">
+                            <div class="liquidity-fill ${liquidityBarClass}" style="width: ${liquidityBarWidth}%"></div>
                         </div>
                         ` : ''}
                         ${usersHtml}
@@ -474,12 +667,19 @@
             }
 
             const fridayCloseDate = new Date(data.fridayCloseTime);
-            const fridayCloseStr = fridayCloseDate.toLocaleString();
+            const fridayCloseStr = fridayCloseDate.toLocaleString([], {
+                month: 'short',
+                day: 'numeric',
+                hour: '2-digit',
+                minute: '2-digit'
+            });
 
             let html = `
                 <div class="section-header">
-                    <h2>Weekend Oracle Premium</h2>
-                    <p class="section-subtitle">HL Mark vs Friday Close (${fridayCloseStr} ET)</p>
+                    <div>
+                        <h2>Weekend Premium</h2>
+                        <p class="section-subtitle">Current price vs Friday close (${fridayCloseStr} ET)</p>
+                    </div>
                 </div>
                 <div class="stats-grid">
             `;
@@ -506,7 +706,7 @@
                         </div>
                         <div class="stat-row">
                             <span class="stat-label">Friday Close</span>
-                            <span class="stat-value">${formatPrice(info.fridayClose)}</span>
+                            <span class="stat-value" style="color: #6b7280">${formatPrice(info.fridayClose)}</span>
                         </div>
                     </div>
                 `;
@@ -520,18 +720,37 @@
             const lastUpdateNode = document.getElementById('lastUpdate');
 
             if (!timestampString) {
-                lastUpdateNode.textContent = 'Last updated: Unknown';
+                lastUpdateNode.innerHTML = '<span class="update-time">Unknown</span>';
                 return;
             }
 
             const parsedDate = new Date(timestampString);
 
             if (isNaN(parsedDate.getTime())) {
-                lastUpdateNode.textContent = `Last updated: ${timestampString}`;
+                lastUpdateNode.innerHTML = `<span class="update-time">${timestampString}</span>`;
                 return;
             }
 
-            lastUpdateNode.textContent = `Last updated: ${parsedDate.toLocaleDateString()} ${parsedDate.toLocaleTimeString()}`;
+            const timeStr = parsedDate.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' });
+            const dateStr = parsedDate.toLocaleDateString([], { month: 'short', day: 'numeric' });
+
+            // Calculate how long ago
+            const now = new Date();
+            const diffMs = now - parsedDate;
+            const diffMins = Math.floor(diffMs / 60000);
+            let agoStr = '';
+            if (diffMins < 1) {
+                agoStr = 'just now';
+            } else if (diffMins < 60) {
+                agoStr = `${diffMins}m ago`;
+            } else {
+                agoStr = `${Math.floor(diffMins / 60)}h ago`;
+            }
+
+            lastUpdateNode.innerHTML = `
+                <span class="update-time">${timeStr}</span>
+                <span>${dateStr} · ${agoStr}</span>
+            `;
         }
 
         // Initial fetch
