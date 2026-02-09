@@ -1,47 +1,41 @@
 {
   "twaps": {
-    "xyz:CL": {
-      "netRemainingNtl": 1329.7920734237614,
-      "numActiveTwaps": 1,
-      "users": [
-        {
-          "user": "0xe3f1436e1937814256e3db7fa7d39bc554eee7ed",
-          "side": "buy",
-          "remainingNtl": 1329.7920734237614,
-          "remainingMinutes": 12.0
-        }
-      ],
-      "liquidity50bps": 128519.63,
-      "twapPctOfLiquidity": 1.0
-    },
     "xyz:GOLD": {
-      "netRemainingNtl": 104170.62905783967,
-      "numActiveTwaps": 3,
+      "netRemainingNtl": 77090.49721489956,
+      "numActiveTwaps": 2,
       "users": [
         {
           "user": "0xa183a9fdae89949393995f6d773311054a9cb684",
           "side": "buy",
-          "remainingNtl": 37134.79695594058,
-          "remainingMinutes": 334.0
-        },
-        {
-          "user": "0x4829f3bbd5508707339547ebefface2b4c86d3b5",
-          "side": "buy",
-          "remainingNtl": 1104.7689907682743,
-          "remainingMinutes": 10.0
+          "remainingNtl": 36026.45107241135,
+          "remainingMinutes": 324.0
         },
         {
           "user": "0xbeac67cc882dad6003b5a67a986249aeb17ac264",
           "side": "buy",
-          "remainingNtl": 65931.06311113082,
-          "remainingMinutes": 26.0
+          "remainingNtl": 41064.04614248821,
+          "remainingMinutes": 16.0
         }
       ],
-      "liquidity50bps": 677806.19,
-      "twapPctOfLiquidity": 15.4
+      "liquidity50bps": 606758.21,
+      "twapPctOfLiquidity": 12.7
+    },
+    "xyz:XYZ100": {
+      "netRemainingNtl": 701543.9176612437,
+      "numActiveTwaps": 1,
+      "users": [
+        {
+          "user": "0x13d92e015d4a8a99ab8490fef42fe83e754116e1",
+          "side": "buy",
+          "remainingNtl": 701543.9176612437,
+          "remainingMinutes": 173.0
+        }
+      ],
+      "liquidity50bps": 1716456.53,
+      "twapPctOfLiquidity": 40.9
     }
   },
-  "lastUpdated": "2026-02-09T00:15:25.666042-05:00",
+  "lastUpdated": "2026-02-09T00:25:28.331027-05:00",
   "_fridayCloseData": {
     "prices": {
       "xyz:AAPL": 277.365,
