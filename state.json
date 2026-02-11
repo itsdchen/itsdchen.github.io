@@ -1,41 +1,55 @@
 {
   "twaps": {
     "xyz:CL": {
-      "netRemainingNtl": 137427.37482389418,
+      "netRemainingNtl": 136319.73631968274,
       "numActiveTwaps": 2,
       "users": [
         {
           "user": "0x9d097697e5b82a52f6b82c16c148a753bbf5c8ae",
           "side": "buy",
-          "remainingNtl": 110102.07458569511,
-          "remainingMinutes": 1199.0
+          "remainingNtl": 109199.81884840288,
+          "remainingMinutes": 1189.0
         },
         {
           "user": "0xbae5e1fd212efdfae8a9ff44d5667c95f10f7902",
           "side": "buy",
-          "remainingNtl": 27325.30023819905,
-          "remainingMinutes": 1311.0
+          "remainingNtl": 27119.917471279852,
+          "remainingMinutes": 1301.0
         }
       ],
-      "liquidity50bps": 9888.37,
-      "twapPctOfLiquidity": 1389.8
+      "liquidity50bps": 9979.62,
+      "twapPctOfLiquidity": 1366.0
     },
     "xyz:XYZ100": {
-      "netRemainingNtl": -16600.58866596446,
+      "netRemainingNtl": -112686.51920192507,
       "numActiveTwaps": 1,
       "users": [
         {
           "user": "0x308fd47d492cf32d0f504c2a3e82bc25583b455b",
           "side": "sell",
-          "remainingNtl": 16600.58866596446,
-          "remainingMinutes": 2.0
+          "remainingNtl": 112686.51920192507,
+          "remainingMinutes": 23.0
         }
       ],
-      "liquidity50bps": 501202.3,
-      "twapPctOfLiquidity": 3.3
+      "liquidity50bps": 326585.54,
+      "twapPctOfLiquidity": 34.5
+    },
+    "xyz:EUR": {
+      "netRemainingNtl": -1835.7623680000002,
+      "numActiveTwaps": 1,
+      "users": [
+        {
+          "user": "0xc6882f85fdf6e0dba6b6ba11145397c435a41116",
+          "side": "sell",
+          "remainingNtl": 1835.7623680000002,
+          "remainingMinutes": 28.0
+        }
+      ],
+      "liquidity50bps": 205764.9,
+      "twapPctOfLiquidity": 0.9
     }
   },
-  "lastUpdated": "2026-02-11T17:28:47.565636-05:00",
+  "lastUpdated": "2026-02-11T17:38:51.720647-05:00",
   "_fridayCloseData": {
     "prices": {
       "xyz:AAPL": 277.365,
