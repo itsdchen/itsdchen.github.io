@@ -1,83 +1,111 @@
 {
   "twaps": {
     "xyz:CL": {
-      "netRemainingNtl": 5836.130156841566,
+      "netRemainingNtl": 5622.461169278489,
       "numActiveTwaps": 1,
       "users": [
         {
           "user": "0xbae5e1fd212efdfae8a9ff44d5667c95f10f7902",
           "side": "buy",
-          "remainingNtl": 5836.130156841566,
-          "remainingMinutes": 281.0
+          "remainingNtl": 5622.461169278489,
+          "remainingMinutes": 271.0
         }
       ],
-      "liquidity50bps": 120165.42,
-      "twapPctOfLiquidity": 4.9
-    },
-    "xyz:SNDK": {
-      "netRemainingNtl": -130700.1625504259,
-      "numActiveTwaps": 2,
-      "users": [
-        {
-          "user": "0x2d0e7bbdbad44a03be91a656cf772e6a33893f57",
-          "side": "buy",
-          "remainingNtl": 1090.8248686988168,
-          "remainingMinutes": 52.0
-        },
-        {
-          "user": "0x2c0757702f4897001f16c8cf881a3ddddf9c7494",
-          "side": "sell",
-          "remainingNtl": 131790.98741912472,
-          "remainingMinutes": 294.0
-        }
-      ],
-      "liquidity50bps": 167448.37,
-      "twapPctOfLiquidity": 78.1
-    },
-    "xyz:MU": {
-      "netRemainingNtl": 1107.1742337370665,
-      "numActiveTwaps": 1,
-      "users": [
-        {
-          "user": "0x2d0e7bbdbad44a03be91a656cf772e6a33893f57",
-          "side": "buy",
-          "remainingNtl": 1107.1742337370665,
-          "remainingMinutes": 53.0
-        }
-      ],
-      "liquidity50bps": 165273.09,
-      "twapPctOfLiquidity": 0.7
+      "liquidity50bps": 103023.34,
+      "twapPctOfLiquidity": 5.5
     },
     "xyz:COIN": {
-      "netRemainingNtl": -97377.44707122231,
+      "netRemainingNtl": -94865.15004188086,
       "numActiveTwaps": 1,
       "users": [
         {
           "user": "0x92a9350b17dcb0b28fe300917b11ce9224914ad5",
           "side": "sell",
-          "remainingNtl": 97377.44707122231,
-          "remainingMinutes": 420.0
+          "remainingNtl": 94865.15004188086,
+          "remainingMinutes": 410.0
         }
       ],
-      "liquidity50bps": 109173.54,
-      "twapPctOfLiquidity": 89.2
+      "liquidity50bps": 130349.54,
+      "twapPctOfLiquidity": 72.8
     },
-    "xyz:COPPER": {
-      "netRemainingNtl": 26567.73282302718,
+    "xyz:SNDK": {
+      "netRemainingNtl": -126423.14259243627,
       "numActiveTwaps": 1,
       "users": [
         {
-          "user": "0xc7f94fb3b3ba614b9b2bf80697ab5a31917005a2",
-          "side": "buy",
-          "remainingNtl": 26567.73282302718,
-          "remainingMinutes": 9.0
+          "user": "0x2c0757702f4897001f16c8cf881a3ddddf9c7494",
+          "side": "sell",
+          "remainingNtl": 126423.14259243627,
+          "remainingMinutes": 284.0
         }
       ],
-      "liquidity50bps": 515274.94,
-      "twapPctOfLiquidity": 5.2
+      "liquidity50bps": 193691.26,
+      "twapPctOfLiquidity": 65.3
+    },
+    "xyz:XYZ100": {
+      "netRemainingNtl": -810048.5322225745,
+      "numActiveTwaps": 2,
+      "users": [
+        {
+          "user": "0x68a410113fab274d4e66685c1242e289ae76c01a",
+          "side": "sell",
+          "remainingNtl": 433108.6102740306,
+          "remainingMinutes": 50.0
+        },
+        {
+          "user": "0x1317ea30e98a643fe356f01f5bc33cd0756044cb",
+          "side": "sell",
+          "remainingNtl": 376939.92194854387,
+          "remainingMinutes": 23.0
+        }
+      ],
+      "liquidity50bps": 1876087.54,
+      "twapPctOfLiquidity": 43.2
+    },
+    "xyz:GOLD": {
+      "netRemainingNtl": 377303.8704642124,
+      "numActiveTwaps": 1,
+      "users": [
+        {
+          "user": "0x1317ea30e98a643fe356f01f5bc33cd0756044cb",
+          "side": "buy",
+          "remainingNtl": 377303.8704642124,
+          "remainingMinutes": 23.0
+        }
+      ],
+      "liquidity50bps": 854454.97,
+      "twapPctOfLiquidity": 44.2
+    },
+    "xyz:NVDA": {
+      "netRemainingNtl": 179970.73739685735,
+      "numActiveTwaps": 1,
+      "users": [
+        {
+          "user": "0xe86351e0f69bd808def36e7bb2f9107443838bb8",
+          "side": "buy",
+          "remainingNtl": 179970.73739685735,
+          "remainingMinutes": 18.0
+        }
+      ],
+      "liquidity50bps": 74347.96,
+      "twapPctOfLiquidity": 242.1
+    },
+    "xyz:META": {
+      "netRemainingNtl": 197016.75299679145,
+      "numActiveTwaps": 1,
+      "users": [
+        {
+          "user": "0x65c1ec85b539bf44041228df7502ac94f0bd8558",
+          "side": "buy",
+          "remainingNtl": 197016.75299679145,
+          "remainingMinutes": 1199.0
+        }
+      ],
+      "liquidity50bps": 174457.28,
+      "twapPctOfLiquidity": 112.9
     }
   },
-  "lastUpdated": "2026-02-12T10:38:47.882182-05:00",
+  "lastUpdated": "2026-02-12T10:48:58.392377-05:00",
   "_fridayCloseData": {
     "prices": {
       "xyz:AAPL": 277.365,
