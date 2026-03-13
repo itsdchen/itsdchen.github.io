@@ -1,162 +1,141 @@
 {
   "twaps": {
     "xyz:CL": {
-      "netRemainingNtl": 419268.6564018462,
+      "netRemainingNtl": 412609.23496094346,
       "numActiveTwaps": 3,
       "users": [
         {
           "user": "0x35af6c00f4be09af7219192cf54edb9892b31428",
           "side": "buy",
-          "remainingNtl": 40541.64811980794,
-          "remainingMinutes": 117.0
+          "remainingNtl": 37083.93283244682,
+          "remainingMinutes": 107.0
         },
         {
           "user": "0x9cfd5c45334201f50156a923c93a4a64a857b19b",
           "side": "buy",
-          "remainingNtl": 61714.99073837173,
-          "remainingMinutes": 591.0
+          "remainingNtl": 60658.82005591146,
+          "remainingMinutes": 580.0
         },
         {
           "user": "0x24f811236317adc9d9c850f7c0ff85c848b5fd40",
           "side": "buy",
-          "remainingNtl": 317012.01754366653,
-          "remainingMinutes": 1388.0
+          "remainingNtl": 314866.4820725852,
+          "remainingMinutes": 1378.0
         }
       ],
-      "liquidity50bps": 142787.56,
-      "twapPctOfLiquidity": 293.6
+      "liquidity50bps": 58970.0,
+      "twapPctOfLiquidity": 699.7
     },
     "xyz:GOLD": {
-      "netRemainingNtl": -594380.1064630628,
+      "netRemainingNtl": -563242.1820569497,
       "numActiveTwaps": 2,
       "users": [
         {
           "user": "0xfc079a49e371976f559bea0cd1c1f87a5f5b9464",
           "side": "buy",
-          "remainingNtl": 79774.16164204554,
-          "remainingMinutes": 226.0
+          "remainingNtl": 76237.50550812064,
+          "remainingMinutes": 216.0
         },
         {
           "user": "0x2b5c2a25a2ec974b1a2614634ad765bbb55afb8d",
           "side": "sell",
-          "remainingNtl": 674154.2681051083,
-          "remainingMinutes": 193.0
+          "remainingNtl": 639479.6875650703,
+          "remainingMinutes": 183.0
         }
       ],
-      "liquidity50bps": 201547.55,
-      "twapPctOfLiquidity": 294.9
+      "liquidity50bps": 139356.25,
+      "twapPctOfLiquidity": 404.2
     },
     "xyz:BRENTOIL": {
-      "netRemainingNtl": 144682.5509622749,
+      "netRemainingNtl": 143502.7198347791,
       "numActiveTwaps": 1,
       "users": [
         {
           "user": "0x9d097697e5b82a52f6b82c16c148a753bbf5c8ae",
           "side": "buy",
-          "remainingNtl": 144682.5509622749,
-          "remainingMinutes": 1163.0
+          "remainingNtl": 143502.7198347791,
+          "remainingMinutes": 1153.0
         }
       ],
-      "liquidity50bps": 145734.11,
-      "twapPctOfLiquidity": 99.3
-    },
-    "xyz:NVDA": {
-      "netRemainingNtl": 8766.043273766583,
-      "numActiveTwaps": 1,
-      "users": [
-        {
-          "user": "0x274e1d88c0230e2511eb535ac579adbe96ba2f78",
-          "side": "buy",
-          "remainingNtl": 8766.043273766583,
-          "remainingMinutes": 6.0
-        }
-      ],
-      "liquidity50bps": 84673.37,
-      "twapPctOfLiquidity": 10.4
-    },
-    "xyz:NATGAS": {
-      "netRemainingNtl": -1137.7159975384784,
-      "numActiveTwaps": 1,
-      "users": [
-        {
-          "user": "0x274e1d88c0230e2511eb535ac579adbe96ba2f78",
-          "side": "sell",
-          "remainingNtl": 1137.7159975384784,
-          "remainingMinutes": 7.0
-        }
-      ],
-      "liquidity50bps": 74017.15,
-      "twapPctOfLiquidity": 1.5
+      "liquidity50bps": 80970.91,
+      "twapPctOfLiquidity": 177.2
     },
     "xyz:XYZ100": {
-      "netRemainingNtl": -15519.760469857418,
-      "numActiveTwaps": 1,
+      "netRemainingNtl": -43454.41426282094,
+      "numActiveTwaps": 2,
       "users": [
         {
           "user": "0xf8e6f23f18a04bfd481ce71ac894488568285f1b",
           "side": "sell",
-          "remainingNtl": 15519.760469857418,
-          "remainingMinutes": 177.0
+          "remainingNtl": 14640.808502404278,
+          "remainingMinutes": 167.0
+        },
+        {
+          "user": "0xe6fcc492fb5ea091bdbe2e1a9f163e5039f144bc",
+          "side": "sell",
+          "remainingNtl": 28813.60576041666,
+          "remainingMinutes": 1384.0
         }
       ],
-      "liquidity50bps": 359073.9,
-      "twapPctOfLiquidity": 4.3
+      "liquidity50bps": 160979.16,
+      "twapPctOfLiquidity": 27.0
     }
   },
-  "lastUpdated": "2026-03-13T16:54:08.216177-04:00",
+  "lastUpdated": "2026-03-13T17:04:14.183920-04:00",
   "_fridayCloseData": {
     "prices": {
-      "xyz:AAPL": 257.11,
+      "xyz:AAPL": 249.905,
       "xyz:ALUMINIUM": 3080.0,
-      "xyz:AMD": 192.635,
-      "xyz:AMZN": 212.915,
-      "xyz:BABA": 130.8,
-      "xyz:BRENTOIL": 92.22,
-      "xyz:CL": 89.309,
-      "xyz:COIN": 196.815,
-      "xyz:COPPER": 5.8499,
+      "xyz:AMD": 192.965,
+      "xyz:AMZN": 207.605,
+      "xyz:BABA": 135.155,
+      "xyz:BRENTOIL": 99.391,
+      "xyz:CL": 97.317,
+      "xyz:COIN": 195.335,
+      "xyz:COPPER": 5.6822,
       "xyz:COST": 914.0,
-      "xyz:CRCL": 101.175,
-      "xyz:CRWV": 72.9255,
+      "xyz:CRCL": 115.135,
+      "xyz:CRWV": 81.0955,
       "xyz:DXY": 97.15,
-      "xyz:EUR": 1.1622,
-      "xyz:EWJ": 84.933,
-      "xyz:EWY": 125.59,
+      "xyz:EUR": 1.14165,
+      "xyz:EWJ": 83.696,
+      "xyz:EWY": 124.575,
       "xyz:GME": 24.2,
-      "xyz:GOLD": 5170.45,
-      "xyz:GOOGL": 297.93,
-      "xyz:HOOD": 76.79,
-      "xyz:HYUNDAI": 364.66,
-      "xyz:INTC": 43.529,
+      "xyz:GOLD": 5017.75,
+      "xyz:GOOGL": 301.705,
+      "xyz:HOOD": 73.306,
+      "xyz:HYUNDAI": 345.915,
+      "xyz:INTC": 45.6825,
       "xyz:JP225": 58000.0,
-      "xyz:JPY": 157.83,
+      "xyz:JPY": 159.74,
       "xyz:KIOXIA": 140.0,
       "xyz:KR200": 5324.0,
       "xyz:LLY": 1066.0,
-      "xyz:META": 642.79,
-      "xyz:MSFT": 408.59,
-      "xyz:MSTR": 133.54,
-      "xyz:MU": 373.125,
-      "xyz:NATGAS": 3.1906,
-      "xyz:NFLX": 98.679,
-      "xyz:NVDA": 178.07,
-      "xyz:ORCL": 152.765,
-      "xyz:PALLADIUM": 1623.0,
-      "xyz:PLATINUM": 2148.9,
-      "xyz:PLTR": 156.49,
-      "xyz:RIVN": 15.4255,
-      "xyz:SILVER": 84.4685,
-      "xyz:SKHX": 618.21,
-      "xyz:SMSN": 121.775,
-      "xyz:SNDK": 526.815,
+      "xyz:META": 612.625,
+      "xyz:MSFT": 395.325,
+      "xyz:MSTR": 139.445,
+      "xyz:MU": 425.22,
+      "xyz:NATGAS": 3.10475,
+      "xyz:NFLX": 95.013,
+      "xyz:NVDA": 180.165,
+      "xyz:ORCL": 155.05,
+      "xyz:PALLADIUM": 1558.95,
+      "xyz:PLATINUM": 2032.25,
+      "xyz:PLTR": 150.57,
+      "xyz:RIVN": 14.9165,
+      "xyz:SILVER": 80.534,
+      "xyz:SKHX": 607.91,
+      "xyz:SMSN": 121.355,
+      "xyz:SNDK": 660.36,
       "xyz:SOFTBANK": 31.0,
-      "xyz:TSLA": 395.905,
-      "xyz:TSM": 339.915,
+      "xyz:TSLA": 389.895,
+      "xyz:TSM": 338.145,
       "xyz:URANIUM": 85.0,
-      "xyz:URNM": 64.2415,
-      "xyz:USAR": 17.5845,
-      "xyz:XYZ100": 24600.5
+      "xyz:URNM": 63.9285,
+      "xyz:USAR": 19.4505,
+      "xyz:VIX": 20.0,
+      "xyz:XYZ100": 24309.0
     },
-    "time": "2026-03-06T17:54:38.616598-05:00"
+    "time": "2026-03-13T17:04:08.616373-04:00"
   }
 }
