@@ -1,105 +1,111 @@
 {
   "twaps": {
     "xyz:SILVER": {
-      "netRemainingNtl": -2997.3285728374904,
+      "netRemainingNtl": -2460.639639135581,
       "numActiveTwaps": 1,
       "users": [
         {
           "user": "0x6e28520e5e4c821f55086805bfe8354d1b6df5f5",
           "side": "sell",
-          "remainingNtl": 2997.3285728374904,
-          "remainingMinutes": 57.0
+          "remainingNtl": 2460.639639135581,
+          "remainingMinutes": 46.0
         }
       ],
-      "liquidity50bps": 56710.27,
-      "twapPctOfLiquidity": 5.3
+      "liquidity50bps": 38437.39,
+      "twapPctOfLiquidity": 6.4
     },
     "xyz:GOLD": {
-      "netRemainingNtl": 43718.133900833345,
-      "numActiveTwaps": 2,
+      "netRemainingNtl": 57245.117629853004,
+      "numActiveTwaps": 3,
       "users": [
         {
           "user": "0xa993ad31ef46873c0193448dbb2f04c0d3854731",
           "side": "buy",
-          "remainingNtl": 14292.275311033824,
-          "remainingMinutes": 695.0
+          "remainingNtl": 14085.262381184277,
+          "remainingMinutes": 685.0
         },
         {
           "user": "0x200e0bb0da9a528ed88fd391d0516242d4aadde4",
           "side": "buy",
-          "remainingNtl": 29425.85858979952,
-          "remainingMinutes": 915.0
+          "remainingNtl": 29104.35987636826,
+          "remainingMinutes": 905.0
+        },
+        {
+          "user": "0x28f0233472b6a44e170e002a72845ca100be4a7e",
+          "side": "buy",
+          "remainingNtl": 14055.49537230047,
+          "remainingMinutes": 662.0
         }
       ],
-      "liquidity50bps": 230882.06,
-      "twapPctOfLiquidity": 18.9
+      "liquidity50bps": 154292.19,
+      "twapPctOfLiquidity": 37.1
     },
     "xyz:PLATINUM": {
-      "netRemainingNtl": 164303.9822333155,
+      "netRemainingNtl": 163042.13946621498,
       "numActiveTwaps": 1,
       "users": [
         {
           "user": "0x5eb2a73703a427accf81757eda67ebe1dfd6f925",
           "side": "buy",
-          "remainingNtl": 164303.9822333155,
-          "remainingMinutes": 1367.0
+          "remainingNtl": 163042.13946621498,
+          "remainingMinutes": 1356.0
         }
       ],
-      "liquidity50bps": 32011.06,
-      "twapPctOfLiquidity": 513.3
+      "liquidity50bps": 36798.84,
+      "twapPctOfLiquidity": 443.1
     },
     "xyz:TSLA": {
-      "netRemainingNtl": 149137.36563972017,
+      "netRemainingNtl": 148068.4746087492,
       "numActiveTwaps": 1,
       "users": [
         {
           "user": "0x5eb2a73703a427accf81757eda67ebe1dfd6f925",
           "side": "buy",
-          "remainingNtl": 149137.36563972017,
-          "remainingMinutes": 1366.0
+          "remainingNtl": 148068.4746087492,
+          "remainingMinutes": 1356.0
         }
       ],
-      "liquidity50bps": 102170.9,
-      "twapPctOfLiquidity": 146.0
+      "liquidity50bps": 108899.8,
+      "twapPctOfLiquidity": 136.0
     },
     "xyz:XYZ100": {
-      "netRemainingNtl": 13300.9371,
+      "netRemainingNtl": 13083.69453140794,
       "numActiveTwaps": 1,
       "users": [
         {
           "user": "0x28f0233472b6a44e170e002a72845ca100be4a7e",
           "side": "buy",
-          "remainingNtl": 13300.9371,
-          "remainingMinutes": 619.0
+          "remainingNtl": 13083.69453140794,
+          "remainingMinutes": 609.0
         }
       ],
-      "liquidity50bps": 222243.06,
-      "twapPctOfLiquidity": 6.0
+      "liquidity50bps": 342812.33,
+      "twapPctOfLiquidity": 3.8
     },
     "xyz:NATGAS": {
-      "netRemainingNtl": 13870.080200069146,
+      "netRemainingNtl": 13562.230768613568,
       "numActiveTwaps": 1,
       "users": [
         {
           "user": "0xb6df97014a9cd6e40703b6db99dd736c3170e30a",
           "side": "buy",
-          "remainingNtl": 13870.080200069146,
-          "remainingMinutes": 443.0
+          "remainingNtl": 13562.230768613568,
+          "remainingMinutes": 433.0
         }
       ],
-      "liquidity50bps": 14188.57,
-      "twapPctOfLiquidity": 97.8
+      "liquidity50bps": 32248.29,
+      "twapPctOfLiquidity": 42.1
     }
   },
-  "lastUpdated": "2026-03-20T20:41:20.784013-04:00",
+  "lastUpdated": "2026-03-20T20:51:27.888110-04:00",
   "weekendPremiums": {
     "isWeekend": true,
     "fridayCloseTime": "2026-03-20T17:58:55.574819-04:00",
     "symbols": {
       "xyz:AAPL": {
         "fridayClose": 249.625,
-        "currentMid": 249.97,
-        "premiumPct": 0.138
+        "currentMid": 249.935,
+        "premiumPct": 0.124
       },
       "xyz:ALUMINIUM": {
         "fridayClose": 3080.0,
@@ -108,13 +114,13 @@
       },
       "xyz:AMD": {
         "fridayClose": 203.085,
-        "currentMid": 201.98,
-        "premiumPct": -0.544
+        "currentMid": 201.94,
+        "premiumPct": -0.564
       },
       "xyz:AMZN": {
         "fridayClose": 207.34,
-        "currentMid": 207.185,
-        "premiumPct": -0.075
+        "currentMid": 207.19,
+        "premiumPct": -0.072
       },
       "xyz:BABA": {
         "fridayClose": 123.27,
@@ -123,23 +129,23 @@
       },
       "xyz:BRENTOIL": {
         "fridayClose": 104.85,
-        "currentMid": 105.62,
-        "premiumPct": 0.734
+        "currentMid": 105.535,
+        "premiumPct": 0.653
       },
       "xyz:CL": {
         "fridayClose": 95.356,
-        "currentMid": 96.073,
-        "premiumPct": 0.752
+        "currentMid": 96.211,
+        "premiumPct": 0.897
       },
       "xyz:COIN": {
         "fridayClose": 199.595,
-        "currentMid": 199.02,
-        "premiumPct": -0.288
+        "currentMid": 198.85,
+        "premiumPct": -0.373
       },
       "xyz:COPPER": {
         "fridayClose": 5.3043,
-        "currentMid": 5.3013,
-        "premiumPct": -0.057
+        "currentMid": 5.3016,
+        "premiumPct": -0.051
       },
       "xyz:COST": {
         "fridayClose": 914.0,
@@ -148,8 +154,8 @@
       },
       "xyz:CRCL": {
         "fridayClose": 126.84,
-        "currentMid": 126.835,
-        "premiumPct": -0.004
+        "currentMid": 126.73,
+        "premiumPct": -0.087
       },
       "xyz:CRWV": {
         "fridayClose": 81.724,
@@ -163,18 +169,18 @@
       },
       "xyz:EUR": {
         "fridayClose": 1.1571,
-        "currentMid": 1.1562,
-        "premiumPct": -0.078
+        "currentMid": 1.1563,
+        "premiumPct": -0.069
       },
       "xyz:EWJ": {
         "fridayClose": 82.275,
-        "currentMid": 82.401,
-        "premiumPct": 0.153
+        "currentMid": 82.431,
+        "premiumPct": 0.19
       },
       "xyz:EWY": {
         "fridayClose": 128.63,
-        "currentMid": 128.555,
-        "premiumPct": -0.058
+        "currentMid": 128.45,
+        "premiumPct": -0.14
       },
       "xyz:GME": {
         "fridayClose": 24.2,
@@ -183,13 +189,13 @@
       },
       "xyz:GOLD": {
         "fridayClose": 4499.65,
-        "currentMid": 4503.75,
-        "premiumPct": 0.091
+        "currentMid": 4501.25,
+        "premiumPct": 0.036
       },
       "xyz:GOOGL": {
         "fridayClose": 302.59,
-        "currentMid": 302.76,
-        "premiumPct": 0.056
+        "currentMid": 302.785,
+        "premiumPct": 0.064
       },
       "xyz:HIMS": {
         "fridayClose": 24.77,
@@ -198,18 +204,18 @@
       },
       "xyz:HOOD": {
         "fridayClose": 71.659,
-        "currentMid": 71.429,
-        "premiumPct": -0.321
+        "currentMid": 71.417,
+        "premiumPct": -0.338
       },
       "xyz:HYUNDAI": {
         "fridayClose": 347.855,
-        "currentMid": 339.705,
-        "premiumPct": -2.343
+        "currentMid": 339.475,
+        "premiumPct": -2.409
       },
       "xyz:INTC": {
         "fridayClose": 44.294,
-        "currentMid": 44.1875,
-        "premiumPct": -0.24
+        "currentMid": 44.181,
+        "premiumPct": -0.255
       },
       "xyz:JP225": {
         "fridayClose": 58000.0,
@@ -218,8 +224,8 @@
       },
       "xyz:JPY": {
         "fridayClose": 159.095,
-        "currentMid": 158.86,
-        "premiumPct": -0.148
+        "currentMid": 158.905,
+        "premiumPct": -0.119
       },
       "xyz:KIOXIA": {
         "fridayClose": 140.0,
@@ -243,23 +249,23 @@
       },
       "xyz:MSFT": {
         "fridayClose": 383.545,
-        "currentMid": 383.785,
-        "premiumPct": 0.063
+        "currentMid": 383.78,
+        "premiumPct": 0.061
       },
       "xyz:MSTR": {
         "fridayClose": 136.345,
-        "currentMid": 136.935,
-        "premiumPct": 0.433
+        "currentMid": 136.83,
+        "premiumPct": 0.356
       },
       "xyz:MU": {
         "fridayClose": 427.495,
-        "currentMid": 425.53,
-        "premiumPct": -0.46
+        "currentMid": 425.595,
+        "premiumPct": -0.444
       },
       "xyz:NATGAS": {
         "fridayClose": 2.77585,
-        "currentMid": 2.91445,
-        "premiumPct": 4.993
+        "currentMid": 2.9073,
+        "premiumPct": 4.735
       },
       "xyz:NFLX": {
         "fridayClose": 92.199,
@@ -268,28 +274,28 @@
       },
       "xyz:NVDA": {
         "fridayClose": 175.095,
-        "currentMid": 174.785,
-        "premiumPct": -0.177
+        "currentMid": 174.755,
+        "premiumPct": -0.194
       },
       "xyz:ORCL": {
         "fridayClose": 150.5,
-        "currentMid": 150.315,
-        "premiumPct": -0.123
+        "currentMid": 150.275,
+        "premiumPct": -0.15
       },
       "xyz:PALLADIUM": {
         "fridayClose": 1414.45,
-        "currentMid": 1415.8,
-        "premiumPct": 0.095
+        "currentMid": 1414.95,
+        "premiumPct": 0.035
       },
       "xyz:PLATINUM": {
         "fridayClose": 1931.55,
-        "currentMid": 1933.45,
-        "premiumPct": 0.098
+        "currentMid": 1932.6,
+        "premiumPct": 0.054
       },
       "xyz:PLTR": {
         "fridayClose": 151.595,
-        "currentMid": 151.715,
-        "premiumPct": 0.079
+        "currentMid": 151.63,
+        "premiumPct": 0.023
       },
       "xyz:RIVN": {
         "fridayClose": 15.0095,
@@ -298,23 +304,23 @@
       },
       "xyz:SILVER": {
         "fridayClose": 68.0985,
-        "currentMid": 68.0865,
-        "premiumPct": -0.018
+        "currentMid": 68.0085,
+        "premiumPct": -0.132
       },
       "xyz:SKHX": {
         "fridayClose": 646.89,
-        "currentMid": 642.445,
-        "premiumPct": -0.687
+        "currentMid": 642.515,
+        "premiumPct": -0.676
       },
       "xyz:SMSN": {
         "fridayClose": 130.805,
-        "currentMid": 131.355,
-        "premiumPct": 0.42
+        "currentMid": 131.125,
+        "premiumPct": 0.245
       },
       "xyz:SNDK": {
         "fridayClose": 720.615,
-        "currentMid": 719.0,
-        "premiumPct": -0.224
+        "currentMid": 718.535,
+        "premiumPct": -0.289
       },
       "xyz:SOFTBANK": {
         "fridayClose": 31.0,
@@ -323,18 +329,18 @@
       },
       "xyz:SP500": {
         "fridayClose": 6567.15,
-        "currentMid": 6551.0,
-        "premiumPct": -0.246
+        "currentMid": 6551.15,
+        "premiumPct": -0.244
       },
       "xyz:TSLA": {
         "fridayClose": 372.415,
-        "currentMid": 372.195,
-        "premiumPct": -0.059
+        "currentMid": 372.275,
+        "premiumPct": -0.038
       },
       "xyz:TSM": {
         "fridayClose": 331.495,
-        "currentMid": 331.465,
-        "premiumPct": -0.009
+        "currentMid": 331.3,
+        "premiumPct": -0.059
       },
       "xyz:URANIUM": {
         "fridayClose": 85.0,
@@ -348,8 +354,8 @@
       },
       "xyz:USAR": {
         "fridayClose": 16.5005,
-        "currentMid": 16.5345,
-        "premiumPct": 0.206
+        "currentMid": 16.5295,
+        "premiumPct": 0.176
       },
       "xyz:VIX": {
         "fridayClose": 20.0,
@@ -358,8 +364,8 @@
       },
       "xyz:XYZ100": {
         "fridayClose": 24028.5,
-        "currentMid": 24004.0,
-        "premiumPct": -0.102
+        "currentMid": 23987.5,
+        "premiumPct": -0.171
       }
     }
   },
