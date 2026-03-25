@@ -409,6 +409,110 @@
             margin-top: 4px;
         }
 
+        /* Market Stats Table */
+        .mkt-stats-section {
+            margin-top: 40px;
+        }
+
+        .mkt-stats-controls {
+            display: flex;
+            gap: 8px;
+            margin-bottom: 16px;
+        }
+
+        .mkt-stats-btn {
+            background: #141c24;
+            border: 1px solid #2a3640;
+            color: #9ca3af;
+            padding: 8px 16px;
+            border-radius: 8px;
+            font-size: 13px;
+            font-weight: 500;
+            cursor: pointer;
+            transition: all 0.15s ease;
+        }
+
+        .mkt-stats-btn:hover {
+            border-color: #3a4754;
+            color: #e7e9ea;
+        }
+
+        .mkt-stats-btn.active {
+            background: #1e293b;
+            border-color: #38bdf8;
+            color: #38bdf8;
+        }
+
+        .mkt-stats-table-wrap {
+            overflow-x: auto;
+            border-radius: 12px;
+            border: 1px solid #232d38;
+        }
+
+        .mkt-stats-table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 13px;
+            white-space: nowrap;
+        }
+
+        .mkt-stats-table th {
+            background: #141c24;
+            color: #6b7280;
+            font-weight: 600;
+            font-size: 11px;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            padding: 10px 14px;
+            text-align: right;
+            border-bottom: 1px solid #232d38;
+            position: sticky;
+            top: 0;
+            z-index: 1;
+        }
+
+        .mkt-stats-table th:first-child {
+            text-align: left;
+            position: sticky;
+            left: 0;
+            z-index: 2;
+            background: #141c24;
+        }
+
+        .mkt-stats-table td {
+            padding: 8px 14px;
+            text-align: right;
+            border-bottom: 1px solid #1a2230;
+            color: #e7e9ea;
+            font-variant-numeric: tabular-nums;
+        }
+
+        .mkt-stats-table td:first-child {
+            text-align: left;
+            font-weight: 600;
+            color: #f3f4f6;
+            position: sticky;
+            left: 0;
+            background: #0f1318;
+            z-index: 1;
+        }
+
+        .mkt-stats-table tr:hover td {
+            background: rgba(37, 99, 235, 0.04);
+        }
+
+        .mkt-stats-table tr:hover td:first-child {
+            background: #151c24;
+        }
+
+        .mkt-stats-table td.no-data {
+            color: #374151;
+        }
+
+        .mkt-stats-table .today-col {
+            border-left: 2px solid #38bdf8;
+        }
+
         /* Footer */
         footer {
             margin-top: 48px;
@@ -467,6 +571,8 @@
         </div>
 
         <div id="weekendPremiums"></div>
+
+        <div id="marketStats"></div>
 
         <footer>
             Auto-refreshes every 30s · Data from Hyperliquid
@@ -753,11 +859,201 @@
             `;
         }
 
+        // ---- Market Stats ----
+
+        let currentMetric = 'volume_ntl';
+
+        async function fetchMarketStats() {
+            try {
+                const resp = await fetch('market_stats.json?t=' + new Date().getTime());
+                if (!resp.ok) return;
+                const data = await resp.json();
+                displayMarketStats(data);
+            } catch (e) {
+                console.error('Error fetching market stats:', e);
+            }
+        }
+
+        function formatDateHeader(dateStr) {
+            // "20260324" -> "3/24"
+            const m = parseInt(dateStr.substring(4, 6), 10);
+            const d = parseInt(dateStr.substring(6, 8), 10);
+            return m + '/' + d;
+        }
+
+        function formatCellValue(val, metric) {
+            if (val == null) return '';
+            if (metric === 'volume_ntl') {
+                if (val >= 1e9) return '$' + (val / 1e9).toFixed(1) + 'B';
+                if (val >= 1e6) return '$' + (val / 1e6).toFixed(1) + 'M';
+                if (val >= 1e3) return '$' + (val / 1e3).toFixed(0) + 'K';
+                return '$' + val.toFixed(0);
+            }
+            if (metric === 'spread_bps') return val.toFixed(1);
+            if (metric === 'daily_vol_pct') return val.toFixed(2) + '%';
+            if (metric === 'num_trades') return val.toLocaleString();
+            return val;
+        }
+
+        function getMetricValue(dayStats, metric) {
+            if (!dayStats) return null;
+            if (metric in dayStats) return dayStats[metric];
+            return null;
+        }
+
+        function computeColorScale(allValues) {
+            // Returns a function mapping value -> rgba background color
+            if (allValues.length === 0) return () => '';
+            const sorted = allValues.slice().sort((a, b) => a - b);
+            const p10 = sorted[Math.floor(sorted.length * 0.1)] || sorted[0];
+            const p90 = sorted[Math.floor(sorted.length * 0.9)] || sorted[sorted.length - 1];
+            return function(val) {
+                if (val == null) return '';
+                const range = p90 - p10;
+                if (range <= 0) return '';
+                const t = Math.max(0, Math.min(1, (val - p10) / range));
+                // Blue gradient: low = transparent, high = blue
+                const alpha = (t * 0.35).toFixed(3);
+                return `rgba(56, 189, 248, ${alpha})`;
+            };
+        }
+
+        function computeSpreadColorScale(allValues) {
+            // Spread: higher = worse, use orange/red tones
+            if (allValues.length === 0) return () => '';
+            const sorted = allValues.slice().sort((a, b) => a - b);
+            const p10 = sorted[Math.floor(sorted.length * 0.1)] || sorted[0];
+            const p90 = sorted[Math.floor(sorted.length * 0.9)] || sorted[sorted.length - 1];
+            return function(val) {
+                if (val == null) return '';
+                const range = p90 - p10;
+                if (range <= 0) return '';
+                const t = Math.max(0, Math.min(1, (val - p10) / range));
+                const alpha = (t * 0.35).toFixed(3);
+                return `rgba(251, 146, 60, ${alpha})`;
+            };
+        }
+
+        function displayMarketStats(data) {
+            const container = document.getElementById('marketStats');
+            if (!data || !data.symbols || !data.dates) {
+                container.innerHTML = '';
+                return;
+            }
+
+            const dates = data.dates;
+            const symbols = data.symbols;
+            const todayStr = dates[dates.length - 1];
+
+            // Compute sort key: average volume over all days (descending)
+            const symList = Object.keys(symbols);
+            const symAvgVol = {};
+            for (const sym of symList) {
+                let total = 0, count = 0;
+                for (const d of dates) {
+                    const v = getMetricValue(symbols[sym][d], 'volume_ntl');
+                    if (v != null) { total += v; count++; }
+                }
+                symAvgVol[sym] = count > 0 ? total / count : 0;
+            }
+            symList.sort((a, b) => symAvgVol[b] - symAvgVol[a]);
+
+            // Gather all values for color scale
+            const allVals = [];
+            for (const sym of symList) {
+                for (const d of dates) {
+                    const v = getMetricValue(symbols[sym][d], currentMetric);
+                    if (v != null) allVals.push(v);
+                }
+            }
+
+            const colorFn = (currentMetric === 'spread_bps')
+                ? computeSpreadColorScale(allVals)
+                : computeColorScale(allVals);
+
+            const metricLabel = {
+                'volume_ntl': 'Volume (Notional)',
+                'spread_bps': 'Spread (bps)',
+                'daily_vol_pct': 'Volatility (%)',
+                'num_trades': 'Num Trades',
+            }[currentMetric] || currentMetric;
+
+            let html = `
+                <div class="section-header">
+                    <div>
+                        <h2>Market Stats</h2>
+                        <p class="section-subtitle">10-day per-symbol stats · updated ${data.lastUpdated ? new Date(data.lastUpdated).toLocaleTimeString([], {hour:'2-digit', minute:'2-digit'}) : '?'}</p>
+                    </div>
+                </div>
+                <div class="mkt-stats-section">
+                <div class="mkt-stats-controls">
+                    <button class="mkt-stats-btn ${currentMetric === 'volume_ntl' ? 'active' : ''}" onclick="switchMetric('volume_ntl')">Volume</button>
+                    <button class="mkt-stats-btn ${currentMetric === 'spread_bps' ? 'active' : ''}" onclick="switchMetric('spread_bps')">Spread</button>
+                    <button class="mkt-stats-btn ${currentMetric === 'daily_vol_pct' ? 'active' : ''}" onclick="switchMetric('daily_vol_pct')">Volatility</button>
+                    <button class="mkt-stats-btn ${currentMetric === 'num_trades' ? 'active' : ''}" onclick="switchMetric('num_trades')">Trades</button>
+                </div>
+                <div class="mkt-stats-table-wrap">
+                <table class="mkt-stats-table">
+                <thead><tr>
+                    <th>Symbol</th>
+            `;
+
+            for (const d of dates) {
+                const isToday = (d === todayStr);
+                html += `<th class="${isToday ? 'today-col' : ''}">${formatDateHeader(d)}</th>`;
+            }
+            html += '</tr></thead><tbody>';
+
+            for (const sym of symList) {
+                const shortSym = sym.replace('xyz:', '');
+                html += `<tr><td>${shortSym}</td>`;
+                for (const d of dates) {
+                    const isToday = (d === todayStr);
+                    const val = getMetricValue(symbols[sym][d], currentMetric);
+                    const bg = colorFn(val);
+                    const style = bg ? `background:${bg}` : '';
+                    const cls = (val == null ? 'no-data' : '') + (isToday ? ' today-col' : '');
+                    html += `<td class="${cls}" style="${style}">${val != null ? formatCellValue(val, currentMetric) : '-'}</td>`;
+                }
+                html += '</tr>';
+            }
+
+            html += '</tbody></table></div></div>';
+            container.innerHTML = html;
+        }
+
+        let _lastMarketStatsData = null;
+
+        function switchMetric(metric) {
+            currentMetric = metric;
+            if (_lastMarketStatsData) {
+                displayMarketStats(_lastMarketStatsData);
+            } else {
+                fetchMarketStats();
+            }
+        }
+
+        // Wrap fetchMarketStats to cache data for metric switching
+        const _origFetchMarketStats = fetchMarketStats;
+        fetchMarketStats = async function() {
+            try {
+                const resp = await fetch('market_stats.json?t=' + new Date().getTime());
+                if (!resp.ok) return;
+                const data = await resp.json();
+                _lastMarketStatsData = data;
+                displayMarketStats(data);
+            } catch (e) {
+                console.error('Error fetching market stats:', e);
+            }
+        };
+
         // Initial fetch
         fetchData();
+        fetchMarketStats();
 
         // Refresh every 30 seconds
         refreshInterval = setInterval(fetchData, 30000);
+        setInterval(fetchMarketStats, 60000);
     </script>
 </body>
 </html>
