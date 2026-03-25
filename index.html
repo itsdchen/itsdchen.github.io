@@ -890,7 +890,7 @@
                 return '$' + val.toFixed(0);
             }
             if (metric === 'spread_bps') return val.toFixed(1);
-            if (metric === 'daily_vol_pct') return val.toFixed(2) + '%';
+            if (metric === 'volatility_bps') return val.toFixed(1);
             if (metric === 'num_trades') return val.toLocaleString();
             return val;
         }
@@ -974,7 +974,7 @@
             const metricLabel = {
                 'volume_ntl': 'Volume (Notional)',
                 'spread_bps': 'Spread (bps)',
-                'daily_vol_pct': 'Volatility (%)',
+                'volatility_bps': 'Volatility (avg 5m range, bps)',
                 'num_trades': 'Num Trades',
             }[currentMetric] || currentMetric;
 
@@ -989,7 +989,7 @@
                 <div class="mkt-stats-controls">
                     <button class="mkt-stats-btn ${currentMetric === 'volume_ntl' ? 'active' : ''}" onclick="switchMetric('volume_ntl')">Volume</button>
                     <button class="mkt-stats-btn ${currentMetric === 'spread_bps' ? 'active' : ''}" onclick="switchMetric('spread_bps')">Spread</button>
-                    <button class="mkt-stats-btn ${currentMetric === 'daily_vol_pct' ? 'active' : ''}" onclick="switchMetric('daily_vol_pct')">Volatility</button>
+                    <button class="mkt-stats-btn ${currentMetric === 'volatility_bps' ? 'active' : ''}" onclick="switchMetric('volatility_bps')">Volatility</button>
                     <button class="mkt-stats-btn ${currentMetric === 'num_trades' ? 'active' : ''}" onclick="switchMetric('num_trades')">Trades</button>
                 </div>
                 <div class="mkt-stats-table-wrap">
