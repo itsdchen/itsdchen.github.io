@@ -430,6 +430,7 @@
             font-weight: 500;
             cursor: pointer;
             transition: all 0.15s ease;
+            position: relative;
         }
 
         .mkt-stats-btn:hover {
@@ -441,6 +442,17 @@
             background: #1e293b;
             border-color: #38bdf8;
             color: #38bdf8;
+        }
+
+        .mkt-stats-desc {
+            color: #4b5563;
+            font-size: 12px;
+            margin-bottom: 12px;
+            line-height: 1.5;
+        }
+
+        .mkt-stats-desc strong {
+            color: #6b7280;
         }
 
         .mkt-stats-table-wrap {
@@ -971,18 +983,18 @@
                 ? computeSpreadColorScale(allVals)
                 : computeColorScale(allVals);
 
-            const metricLabel = {
-                'volume_ntl': 'Volume (Notional)',
-                'spread_bps': 'Spread (bps)',
-                'volatility_bps': 'Volatility (avg 5m range, bps)',
-                'num_trades': 'Num Trades',
-            }[currentMetric] || currentMetric;
+            const metricDesc = {
+                'volume_ntl': '<strong>Volume (Notional $)</strong> — Total dollar value traded. Historical: trade-by-trade sum from gzpbf (shares x time-weighted avg mid), or daily candle (shares x avg OHLC price). Today: from live daily candle, updates each cycle.',
+                'spread_bps': '<strong>Spread (bps)</strong> — Bid-ask spread in basis points (1 bps = 0.01%). Historical w/ gzpbf: time-weighted average from full L2 book replay (each spread weighted by how long it persisted). Today: time-weighted average of periodic L2 snapshots taken each cycle. Days without gzpbf or live data show "-".',
+                'volatility_bps': '<strong>Volatility (bps)</strong> — Average 5-minute candle range. For each 5-min candle: (high - low) / mid x 10000. Then averaged across all candles in the day. Same calculation for historical and live. Today accumulates as new 5-min candles complete.',
+                'num_trades': '<strong>Trades</strong> — Total number of individual trade executions. Historical w/ gzpbf: counted from trade-by-trade replay. Otherwise: from Hyperliquid daily candle "n" field.',
+            };
 
             let html = `
                 <div class="section-header">
                     <div>
                         <h2>Market Stats</h2>
-                        <p class="section-subtitle">10-day per-symbol stats · updated ${data.lastUpdated ? new Date(data.lastUpdated).toLocaleTimeString([], {hour:'2-digit', minute:'2-digit'}) : '?'}</p>
+                        <p class="section-subtitle">${Object.keys(data.symbols).length} symbols · ${data.dates.length} days · updated ${data.lastUpdated ? new Date(data.lastUpdated).toLocaleTimeString([], {hour:'2-digit', minute:'2-digit'}) : '?'}</p>
                     </div>
                 </div>
                 <div class="mkt-stats-section">
@@ -992,6 +1004,7 @@
                     <button class="mkt-stats-btn ${currentMetric === 'volatility_bps' ? 'active' : ''}" onclick="switchMetric('volatility_bps')">Volatility</button>
                     <button class="mkt-stats-btn ${currentMetric === 'num_trades' ? 'active' : ''}" onclick="switchMetric('num_trades')">Trades</button>
                 </div>
+                <div class="mkt-stats-desc">${metricDesc[currentMetric] || ''}</div>
                 <div class="mkt-stats-table-wrap">
                 <table class="mkt-stats-table">
                 <thead><tr>
