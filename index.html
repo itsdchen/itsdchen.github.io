@@ -985,9 +985,7 @@
 
             const metricDesc = {
                 'volume_ntl': '<strong>Volume (Notional $)</strong> — Total dollar value traded. Historical: trade-by-trade sum from gzpbf (shares x time-weighted avg mid), or daily candle (shares x avg OHLC price). Today: from live daily candle, updates each cycle.',
-                'spread_bps': '<strong>Spread (bps)</strong> — Bid-ask spread in basis points (1 bps = 0.01%). Historical w/ gzpbf: time-weighted average from full L2 book replay (each spread weighted by how long it persisted). Today: time-weighted average of periodic L2 snapshots taken each cycle. Days without gzpbf or live data show "-".',
                 'volatility_bps': '<strong>Volatility (bps)</strong> — Average 5-minute candle range. For each 5-min candle: (high - low) / mid x 10000. Then averaged across all candles in the day. Same calculation for historical and live. Today accumulates as new 5-min candles complete.',
-                'num_trades': '<strong>Trades</strong> — Total number of individual trade executions. Historical w/ gzpbf: counted from trade-by-trade replay. Otherwise: from Hyperliquid daily candle "n" field.',
             };
 
             let html = `
@@ -1000,9 +998,7 @@
                 <div class="mkt-stats-section">
                 <div class="mkt-stats-controls">
                     <button class="mkt-stats-btn ${currentMetric === 'volume_ntl' ? 'active' : ''}" onclick="switchMetric('volume_ntl')">Volume</button>
-                    <button class="mkt-stats-btn ${currentMetric === 'spread_bps' ? 'active' : ''}" onclick="switchMetric('spread_bps')">Spread</button>
                     <button class="mkt-stats-btn ${currentMetric === 'volatility_bps' ? 'active' : ''}" onclick="switchMetric('volatility_bps')">Volatility</button>
-                    <button class="mkt-stats-btn ${currentMetric === 'num_trades' ? 'active' : ''}" onclick="switchMetric('num_trades')">Trades</button>
                 </div>
                 <div class="mkt-stats-desc">${metricDesc[currentMetric] || ''}</div>
                 <div class="mkt-stats-table-wrap">
