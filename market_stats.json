@@ -1,6 +1,5 @@
 {
  "dates": [
-  "20260527",
   "20260528",
   "20260529",
   "20260530",
@@ -9,21 +8,11 @@
   "20260602",
   "20260603",
   "20260604",
-  "20260605"
+  "20260605",
+  "20260606"
  ],
  "symbols": {
   "xyz:AAPL": {
-   "20260527": {
-    "source": "symstats",
-    "num_trades": 8628,
-    "volume_ntl": 7240693.05,
-    "avg_mid": 310.1463,
-    "spread_bps": 3.49,
-    "med_trade_sz": 1.08,
-    "med_inside_liq": 80.512,
-    "n_midchanges": 22065,
-    "volatility_bps": 7.36
-   },
    "20260528": {
     "source": "symstats",
     "num_trades": 5854,
@@ -119,20 +108,17 @@
     "avg_mid": 309.8875,
     "volatility_bps": 11.57,
     "spread_bps": 1.18
+   },
+   "20260606": {
+    "source": "live",
+    "volume_ntl": 1806105.49,
+    "num_trades": 6441,
+    "avg_mid": 305.92,
+    "volatility_bps": 11.64,
+    "spread_bps": 0.33
    }
   },
   "xyz:AMD": {
-   "20260527": {
-    "source": "symstats",
-    "num_trades": 25395,
-    "volume_ntl": 27276130.15,
-    "avg_mid": 498.8883,
-    "spread_bps": 3.27,
-    "med_trade_sz": 0.448,
-    "med_inside_liq": 10.016,
-    "n_midchanges": 52573,
-    "volatility_bps": 26.9
-   },
    "20260528": {
     "source": "symstats",
     "num_trades": 17215,
@@ -228,20 +214,17 @@
     "avg_mid": 487.0575,
     "volatility_bps": 36.78,
     "spread_bps": 2.52
+   },
+   "20260606": {
+    "source": "live",
+    "volume_ntl": 14742348.1,
+    "num_trades": 10269,
+    "avg_mid": 450.675,
+    "volatility_bps": 40.3,
+    "spread_bps": 4.04
    }
   },
   "xyz:AMZN": {
-   "20260527": {
-    "source": "symstats",
-    "num_trades": 12486,
-    "volume_ntl": 11112273.38,
-    "avg_mid": 269.6511,
-    "spread_bps": 2.78,
-    "med_trade_sz": 0.5,
-    "med_inside_liq": 37.092,
-    "n_midchanges": 25339,
-    "volatility_bps": 10.34
-   },
    "20260528": {
     "source": "symstats",
     "num_trades": 14110,
@@ -337,20 +320,17 @@
     "avg_mid": 250.165,
     "volatility_bps": 12.37,
     "spread_bps": 1.56
+   },
+   "20260606": {
+    "source": "live",
+    "volume_ntl": 739152.81,
+    "num_trades": 3771,
+    "avg_mid": 245.0425,
+    "volatility_bps": 8.54,
+    "spread_bps": 3.27
    }
   },
   "xyz:ARM": {
-   "20260527": {
-    "source": "symstats",
-    "num_trades": 3165,
-    "volume_ntl": 2187438.91,
-    "avg_mid": 310.2944,
-    "spread_bps": 28.48,
-    "med_trade_sz": 0.61,
-    "med_inside_liq": 2.45,
-    "n_midchanges": 27239,
-    "volatility_bps": 11.95
-   },
    "20260528": {
     "source": "symstats",
     "num_trades": 7842,
@@ -446,6 +426,14 @@
     "avg_mid": 359.935,
     "volatility_bps": 42.89,
     "spread_bps": 3.25
+   },
+   "20260606": {
+    "source": "live",
+    "volume_ntl": 377224.44,
+    "num_trades": 1175,
+    "avg_mid": 332.055,
+    "volatility_bps": 35.99,
+    "spread_bps": 2.43
    }
   },
   "xyz:ASML": {
@@ -511,6 +499,14 @@
     "avg_mid": 1686.825,
     "volatility_bps": 8.8,
     "spread_bps": 25.4
+   },
+   "20260606": {
+    "source": "live",
+    "volume_ntl": 11905.69,
+    "num_trades": 52,
+    "avg_mid": 1634.275,
+    "volatility_bps": 1.89,
+    "spread_bps": 40.49
    }
   },
   "xyz:AVGO": {
@@ -541,20 +537,17 @@
     "avg_mid": 399.0125,
     "volatility_bps": 24.18,
     "spread_bps": 4.03
+   },
+   "20260606": {
+    "source": "live",
+    "volume_ntl": 2320543.51,
+    "num_trades": 4204,
+    "avg_mid": 374.02,
+    "volatility_bps": 65.59,
+    "spread_bps": 11.05
    }
   },
   "xyz:BABA": {
-   "20260527": {
-    "source": "symstats",
-    "num_trades": 2680,
-    "volume_ntl": 2884461.69,
-    "avg_mid": 126.9778,
-    "spread_bps": 8.31,
-    "med_trade_sz": 1.144,
-    "med_inside_liq": 220.422,
-    "n_midchanges": 13782,
-    "volatility_bps": 7.22
-   },
    "20260528": {
     "source": "symstats",
     "num_trades": 3304,
@@ -638,16 +631,17 @@
     "avg_mid": 123.7025,
     "volatility_bps": 6.77,
     "spread_bps": 6.71
+   },
+   "20260606": {
+    "source": "live",
+    "volume_ntl": 206040.99,
+    "num_trades": 520,
+    "avg_mid": 120.4625,
+    "volatility_bps": 4.54,
+    "spread_bps": 7.49
    }
   },
   "xyz:BB": {
-   "20260527": {
-    "source": "api",
-    "num_trades": 16870,
-    "volume_ntl": 10498768.51,
-    "avg_mid": 8.5465,
-    "volatility_bps": 94.34
-   },
    "20260528": {
     "source": "symstats",
     "num_trades": 11404,
@@ -743,20 +737,17 @@
     "avg_mid": 9.6883,
     "volatility_bps": 68.52,
     "spread_bps": 9.89
+   },
+   "20260606": {
+    "source": "live",
+    "volume_ntl": 1492409.04,
+    "num_trades": 3107,
+    "avg_mid": 9.1133,
+    "volatility_bps": 82.34,
+    "spread_bps": 8.99
    }
   },
   "xyz:BIRD": {
-   "20260527": {
-    "source": "symstats",
-    "num_trades": 2329,
-    "volume_ntl": 653552.68,
-    "avg_mid": 3.8461,
-    "spread_bps": 81.9,
-    "med_trade_sz": 9.4,
-    "med_inside_liq": 121.9,
-    "n_midchanges": 3908,
-    "volatility_bps": 37.12
-   },
    "20260528": {
     "source": "symstats",
     "num_trades": 1080,
@@ -840,20 +831,17 @@
     "avg_mid": 4.0417,
     "volatility_bps": 32.03,
     "spread_bps": 72.77
+   },
+   "20260606": {
+    "source": "live",
+    "volume_ntl": 12113.8,
+    "num_trades": 123,
+    "avg_mid": 3.8551,
+    "volatility_bps": 8.86,
+    "spread_bps": 0.52
    }
   },
   "xyz:BRENTOIL": {
-   "20260527": {
-    "source": "symstats",
-    "num_trades": 140937,
-    "volume_ntl": 254978322.38,
-    "avg_mid": 93.8219,
-    "spread_bps": 0.7,
-    "med_trade_sz": 0.52,
-    "med_inside_liq": 310.13,
-    "n_midchanges": 101988,
-    "volatility_bps": 23.18
-   },
    "20260528": {
     "source": "symstats",
     "num_trades": 120957,
@@ -937,20 +925,17 @@
     "avg_mid": 94.409,
     "volatility_bps": 21.7,
     "spread_bps": 1.15
+   },
+   "20260606": {
+    "source": "live",
+    "volume_ntl": 11578469.08,
+    "num_trades": 12763,
+    "avg_mid": 94.638,
+    "volatility_bps": 20.14,
+    "spread_bps": 1.48
    }
   },
   "xyz:BX": {
-   "20260527": {
-    "source": "symstats",
-    "num_trades": 285,
-    "volume_ntl": 176463.57,
-    "avg_mid": 118.4605,
-    "spread_bps": 56.41,
-    "med_trade_sz": 0.69,
-    "med_inside_liq": 35.89,
-    "n_midchanges": 335,
-    "volatility_bps": 0.09
-   },
    "20260528": {
     "source": "symstats",
     "num_trades": 417,
@@ -1046,20 +1031,17 @@
     "avg_mid": 116.795,
     "volatility_bps": 2.31,
     "spread_bps": 42.22
+   },
+   "20260606": {
+    "source": "live",
+    "volume_ntl": 857.94,
+    "num_trades": 6,
+    "avg_mid": 115.005,
+    "volatility_bps": 2.41,
+    "spread_bps": 73.95
    }
   },
   "xyz:CBRS": {
-   "20260527": {
-    "source": "symstats",
-    "num_trades": 28147,
-    "volume_ntl": 36425143.58,
-    "avg_mid": 255.9653,
-    "spread_bps": 6.38,
-    "med_trade_sz": 1.64,
-    "med_inside_liq": 22.88,
-    "n_midchanges": 40235,
-    "volatility_bps": 44.9
-   },
    "20260528": {
     "source": "symstats",
     "num_trades": 23324,
@@ -1155,20 +1137,17 @@
     "avg_mid": 207.7375,
     "volatility_bps": 36.86,
     "spread_bps": 5.93
+   },
+   "20260606": {
+    "source": "live",
+    "volume_ntl": 3295080.34,
+    "num_trades": 6077,
+    "avg_mid": 193.17,
+    "volatility_bps": 53.42,
+    "spread_bps": 23.17
    }
   },
   "xyz:CL": {
-   "20260527": {
-    "source": "symstats",
-    "num_trades": 182667,
-    "volume_ntl": 568369539.22,
-    "avg_mid": 90.2571,
-    "spread_bps": 0.51,
-    "med_trade_sz": 4.403,
-    "med_inside_liq": 265.166,
-    "n_midchanges": 91484,
-    "volatility_bps": 25.53
-   },
    "20260528": {
     "source": "symstats",
     "num_trades": 184560,
@@ -1252,20 +1231,17 @@
     "avg_mid": 91.6455,
     "volatility_bps": 24.48,
     "spread_bps": 0.47
+   },
+   "20260606": {
+    "source": "live",
+    "volume_ntl": 18524082.06,
+    "num_trades": 24716,
+    "avg_mid": 91.4435,
+    "volatility_bps": 20.54,
+    "spread_bps": 0.11
    }
   },
   "xyz:COIN": {
-   "20260527": {
-    "source": "symstats",
-    "num_trades": 7131,
-    "volume_ntl": 6548342.77,
-    "avg_mid": 177.1633,
-    "spread_bps": 4.28,
-    "med_trade_sz": 1.533,
-    "med_inside_liq": 12.159,
-    "n_midchanges": 31725,
-    "volatility_bps": 15.73
-   },
    "20260528": {
     "source": "symstats",
     "num_trades": 5359,
@@ -1361,20 +1337,17 @@
     "avg_mid": 156.88,
     "volatility_bps": 30.88,
     "spread_bps": 3.2
+   },
+   "20260606": {
+    "source": "live",
+    "volume_ntl": 1497124.3,
+    "num_trades": 1390,
+    "avg_mid": 150.8925,
+    "volatility_bps": 18.13,
+    "spread_bps": 6.69
    }
   },
   "xyz:COPPER": {
-   "20260527": {
-    "source": "symstats",
-    "num_trades": 6767,
-    "volume_ntl": 6146591.97,
-    "avg_mid": 6.358,
-    "spread_bps": 2.46,
-    "med_trade_sz": 39.2,
-    "med_inside_liq": 1107.19,
-    "n_midchanges": 44947,
-    "volatility_bps": 9.62
-   },
    "20260528": {
     "source": "symstats",
     "num_trades": 7585,
@@ -1458,20 +1431,17 @@
     "avg_mid": 6.3984,
     "volatility_bps": 11.2,
     "spread_bps": 1.29
+   },
+   "20260606": {
+    "source": "live",
+    "volume_ntl": 1273453.89,
+    "num_trades": 4189,
+    "avg_mid": 6.2575,
+    "volatility_bps": 12.53,
+    "spread_bps": 2.09
    }
   },
   "xyz:COST": {
-   "20260527": {
-    "source": "symstats",
-    "num_trades": 507,
-    "volume_ntl": 223640.53,
-    "avg_mid": 1006.729,
-    "spread_bps": 28.69,
-    "med_trade_sz": 0.1984,
-    "med_inside_liq": 1.193,
-    "n_midchanges": 2930,
-    "volatility_bps": 2.06
-   },
    "20260528": {
     "source": "symstats",
     "num_trades": 505,
@@ -1555,20 +1525,17 @@
     "avg_mid": 976.9925,
     "volatility_bps": 3.5,
     "spread_bps": 25.63
+   },
+   "20260606": {
+    "source": "live",
+    "volume_ntl": 2805.25,
+    "num_trades": 13,
+    "avg_mid": 969.4675,
+    "volatility_bps": 0.29,
+    "spread_bps": 28.47
    }
   },
   "xyz:CRCL": {
-   "20260527": {
-    "source": "symstats",
-    "num_trades": 31483,
-    "volume_ntl": 31937082.0,
-    "avg_mid": 103.6841,
-    "spread_bps": 2.74,
-    "med_trade_sz": 3.412,
-    "med_inside_liq": 75.686,
-    "n_midchanges": 42314,
-    "volatility_bps": 27.65
-   },
    "20260528": {
     "source": "symstats",
     "num_trades": 29964,
@@ -1664,20 +1631,17 @@
     "avg_mid": 85.0925,
     "volatility_bps": 44.68,
     "spread_bps": 2.51
+   },
+   "20260606": {
+    "source": "live",
+    "volume_ntl": 2838946.62,
+    "num_trades": 6490,
+    "avg_mid": 79.897,
+    "volatility_bps": 30.23,
+    "spread_bps": 1.39
    }
   },
   "xyz:CRWV": {
-   "20260527": {
-    "source": "symstats",
-    "num_trades": 5856,
-    "volume_ntl": 6621213.64,
-    "avg_mid": 104.4141,
-    "spread_bps": 8.05,
-    "med_trade_sz": 2.37,
-    "med_inside_liq": 60.21,
-    "n_midchanges": 30446,
-    "volatility_bps": 20.5
-   },
    "20260528": {
     "source": "symstats",
     "num_trades": 7308,
@@ -1761,6 +1725,14 @@
     "avg_mid": 101.9295,
     "volatility_bps": 40.21,
     "spread_bps": 10.85
+   },
+   "20260606": {
+    "source": "live",
+    "volume_ntl": 2460642.11,
+    "num_trades": 3731,
+    "avg_mid": 95.6135,
+    "volatility_bps": 62.93,
+    "spread_bps": 4.9
    }
   },
   "xyz:DELL": {
@@ -1809,20 +1781,17 @@
     "avg_mid": 400.505,
     "volatility_bps": 29.67,
     "spread_bps": 15.66
+   },
+   "20260606": {
+    "source": "live",
+    "volume_ntl": 51513.54,
+    "num_trades": 269,
+    "avg_mid": 385.7825,
+    "volatility_bps": 6.22,
+    "spread_bps": 2.61
    }
   },
   "xyz:DKNG": {
-   "20260527": {
-    "source": "symstats",
-    "num_trades": 319,
-    "volume_ntl": 288354.56,
-    "avg_mid": 24.681,
-    "spread_bps": 75.28,
-    "med_trade_sz": 3.54,
-    "med_inside_liq": 98.98,
-    "n_midchanges": 1007,
-    "volatility_bps": 0.94
-   },
    "20260528": {
     "source": "symstats",
     "num_trades": 318,
@@ -1906,20 +1875,17 @@
     "avg_mid": 25.213,
     "volatility_bps": 6.39,
     "spread_bps": 36.96
+   },
+   "20260606": {
+    "source": "live",
+    "volume_ntl": 262.72,
+    "num_trades": 1,
+    "avg_mid": 24.762,
+    "volatility_bps": 0.0,
+    "spread_bps": 109.25
    }
   },
   "xyz:DRAM": {
-   "20260527": {
-    "source": "symstats",
-    "num_trades": 47863,
-    "volume_ntl": 41280956.46,
-    "avg_mid": 60.8681,
-    "spread_bps": 4.9,
-    "med_trade_sz": 3.3,
-    "med_inside_liq": 33.9,
-    "n_midchanges": 59177,
-    "volatility_bps": 47.39
-   },
    "20260528": {
     "source": "symstats",
     "num_trades": 32193,
@@ -2015,20 +1981,17 @@
     "avg_mid": 59.1467,
     "volatility_bps": 56.67,
     "spread_bps": 3.64
+   },
+   "20260606": {
+    "source": "live",
+    "volume_ntl": 3538888.59,
+    "num_trades": 8946,
+    "avg_mid": 54.8588,
+    "volatility_bps": 58.3,
+    "spread_bps": 4.02
    }
   },
   "xyz:EBAY": {
-   "20260527": {
-    "source": "symstats",
-    "num_trades": 443,
-    "volume_ntl": 307760.88,
-    "avg_mid": 113.6337,
-    "spread_bps": 33.01,
-    "med_trade_sz": 1.0,
-    "med_inside_liq": 19.46,
-    "n_midchanges": 3217,
-    "volatility_bps": 2.09
-   },
    "20260528": {
     "source": "symstats",
     "num_trades": 442,
@@ -2124,20 +2087,17 @@
     "avg_mid": 110.275,
     "volatility_bps": 3.29,
     "spread_bps": 78.59
+   },
+   "20260606": {
+    "source": "live",
+    "volume_ntl": 252.37,
+    "num_trades": 6,
+    "avg_mid": 109.2525,
+    "volatility_bps": 2.12,
+    "spread_bps": 84.94
    }
   },
   "xyz:EUR": {
-   "20260527": {
-    "source": "symstats",
-    "num_trades": 1021,
-    "volume_ntl": 2752894.21,
-    "avg_mid": 1.1638,
-    "spread_bps": 2.49,
-    "med_trade_sz": 588.8,
-    "med_inside_liq": 10800.0,
-    "n_midchanges": 8712,
-    "volatility_bps": 0.74
-   },
    "20260528": {
     "source": "symstats",
     "num_trades": 2430,
@@ -2221,20 +2181,17 @@
     "avg_mid": 1.1582,
     "volatility_bps": 2.33,
     "spread_bps": 2.35
+   },
+   "20260606": {
+    "source": "live",
+    "volume_ntl": 27842.13,
+    "num_trades": 32,
+    "avg_mid": 1.1533,
+    "volatility_bps": 0.06,
+    "spread_bps": 0.87
    }
   },
   "xyz:EWJ": {
-   "20260527": {
-    "source": "symstats",
-    "num_trades": 540,
-    "volume_ntl": 568311.04,
-    "avg_mid": 92.2235,
-    "spread_bps": 8.66,
-    "med_trade_sz": 2.08,
-    "med_inside_liq": 63.76,
-    "n_midchanges": 23569,
-    "volatility_bps": 1.46
-   },
    "20260528": {
     "source": "symstats",
     "num_trades": 497,
@@ -2318,20 +2275,17 @@
     "avg_mid": 92.223,
     "volatility_bps": 1.83,
     "spread_bps": 9.92
+   },
+   "20260606": {
+    "source": "live",
+    "volume_ntl": 353176.26,
+    "num_trades": 870,
+    "avg_mid": 89.4518,
+    "volatility_bps": 15.45,
+    "spread_bps": 14.89
    }
   },
   "xyz:EWT": {
-   "20260527": {
-    "source": "symstats",
-    "num_trades": 409,
-    "volume_ntl": 264896.04,
-    "avg_mid": 103.2753,
-    "spread_bps": 39.78,
-    "med_trade_sz": 2.5,
-    "med_inside_liq": 15.26,
-    "n_midchanges": 3813,
-    "volatility_bps": 2.66
-   },
    "20260528": {
     "source": "symstats",
     "num_trades": 394,
@@ -2427,20 +2381,17 @@
     "avg_mid": 101.1115,
     "volatility_bps": 4.78,
     "spread_bps": 40.85
+   },
+   "20260606": {
+    "source": "live",
+    "volume_ntl": 1801.26,
+    "num_trades": 39,
+    "avg_mid": 96.79,
+    "volatility_bps": 1.81,
+    "spread_bps": 59.99
    }
   },
   "xyz:EWY": {
-   "20260527": {
-    "source": "symstats",
-    "num_trades": 21294,
-    "volume_ntl": 26778570.42,
-    "avg_mid": 198.7056,
-    "spread_bps": 3.53,
-    "med_trade_sz": 2.323,
-    "med_inside_liq": 41.253,
-    "n_midchanges": 50891,
-    "volatility_bps": 27.23
-   },
    "20260528": {
     "source": "symstats",
     "num_trades": 20011,
@@ -2524,20 +2475,17 @@
     "avg_mid": 186.65,
     "volatility_bps": 42.18,
     "spread_bps": 2.86
+   },
+   "20260606": {
+    "source": "live",
+    "volume_ntl": 1996877.9,
+    "num_trades": 4279,
+    "avg_mid": 176.02,
+    "volatility_bps": 39.68,
+    "spread_bps": 2.27
    }
   },
   "xyz:EWZ": {
-   "20260527": {
-    "source": "symstats",
-    "num_trades": 359,
-    "volume_ntl": 312706.17,
-    "avg_mid": 36.3764,
-    "spread_bps": 35.69,
-    "med_trade_sz": 5.99,
-    "med_inside_liq": 55.82,
-    "n_midchanges": 2955,
-    "volatility_bps": 0.67
-   },
    "20260528": {
     "source": "symstats",
     "num_trades": 357,
@@ -2633,20 +2581,17 @@
     "avg_mid": 34.3695,
     "volatility_bps": 34.09,
     "spread_bps": 57.05
+   },
+   "20260606": {
+    "source": "live",
+    "volume_ntl": 872.73,
+    "num_trades": 5,
+    "avg_mid": 34.0247,
+    "volatility_bps": 1.1,
+    "spread_bps": 111.72
    }
   },
   "xyz:GBP": {
-   "20260527": {
-    "source": "symstats",
-    "num_trades": 313,
-    "volume_ntl": 331400.22,
-    "avg_mid": 1.3432,
-    "spread_bps": 12.91,
-    "med_trade_sz": 86.0,
-    "med_inside_liq": 8709.0,
-    "n_midchanges": 1831,
-    "volatility_bps": 0.09
-   },
    "20260528": {
     "source": "symstats",
     "num_trades": 318,
@@ -2730,20 +2675,13 @@
     "avg_mid": 1.3399,
     "volatility_bps": 0.29,
     "spread_bps": 14.03
+   },
+   "20260606": {
+    "source": "live",
+    "spread_bps": 15.74
    }
   },
   "xyz:GME": {
-   "20260527": {
-    "source": "symstats",
-    "num_trades": 716,
-    "volume_ntl": 1383229.77,
-    "avg_mid": 21.8358,
-    "spread_bps": 24.75,
-    "med_trade_sz": 9.55,
-    "med_inside_liq": 89.8,
-    "n_midchanges": 9733,
-    "volatility_bps": 3.62
-   },
    "20260528": {
     "source": "symstats",
     "num_trades": 718,
@@ -2839,20 +2777,17 @@
     "avg_mid": 22.0545,
     "volatility_bps": 5.76,
     "spread_bps": 52.23
+   },
+   "20260606": {
+    "source": "live",
+    "volume_ntl": 17911.98,
+    "num_trades": 46,
+    "avg_mid": 21.8738,
+    "volatility_bps": 5.04,
+    "spread_bps": 59.37
    }
   },
   "xyz:GOLD": {
-   "20260527": {
-    "source": "symstats",
-    "num_trades": 19131,
-    "volume_ntl": 57836386.87,
-    "avg_mid": 4454.1041,
-    "spread_bps": 0.37,
-    "med_trade_sz": 0.2116,
-    "med_inside_liq": 8.5108,
-    "n_midchanges": 18228,
-    "volatility_bps": 8.26
-   },
    "20260528": {
     "source": "symstats",
     "num_trades": 17050,
@@ -2936,20 +2871,17 @@
     "avg_mid": 4395.15,
     "volatility_bps": 9.55,
     "spread_bps": 0.23
+   },
+   "20260606": {
+    "source": "live",
+    "volume_ntl": 3258135.87,
+    "num_trades": 1448,
+    "avg_mid": 4326.275,
+    "volatility_bps": 2.89,
+    "spread_bps": 0.23
    }
   },
   "xyz:GOOGL": {
-   "20260527": {
-    "source": "symstats",
-    "num_trades": 12483,
-    "volume_ntl": 11942307.12,
-    "avg_mid": 389.6141,
-    "spread_bps": 2.0,
-    "med_trade_sz": 0.768,
-    "med_inside_liq": 13.185,
-    "n_midchanges": 32053,
-    "volatility_bps": 9.43
-   },
    "20260528": {
     "source": "symstats",
     "num_trades": 8538,
@@ -3045,20 +2977,17 @@
     "avg_mid": 367.8125,
     "volatility_bps": 15.99,
     "spread_bps": 1.0
+   },
+   "20260606": {
+    "source": "live",
+    "volume_ntl": 2475862.62,
+    "num_trades": 4760,
+    "avg_mid": 362.98,
+    "volatility_bps": 11.84,
+    "spread_bps": 2.49
    }
   },
   "xyz:HIMS": {
-   "20260527": {
-    "source": "symstats",
-    "num_trades": 2993,
-    "volume_ntl": 4483564.42,
-    "avg_mid": 24.9742,
-    "spread_bps": 15.29,
-    "med_trade_sz": 7.33,
-    "med_inside_liq": 157.41,
-    "n_midchanges": 19837,
-    "volatility_bps": 19.13
-   },
    "20260528": {
     "source": "symstats",
     "num_trades": 1574,
@@ -3142,20 +3071,17 @@
     "avg_mid": 26.871,
     "volatility_bps": 23.54,
     "spread_bps": 37.97
+   },
+   "20260606": {
+    "source": "live",
+    "volume_ntl": 16037.28,
+    "num_trades": 221,
+    "avg_mid": 25.6183,
+    "volatility_bps": 9.46,
+    "spread_bps": 0.4
    }
   },
   "xyz:HOOD": {
-   "20260527": {
-    "source": "symstats",
-    "num_trades": 10154,
-    "volume_ntl": 10112877.45,
-    "avg_mid": 75.2944,
-    "spread_bps": 3.35,
-    "med_trade_sz": 2.426,
-    "med_inside_liq": 9.051,
-    "n_midchanges": 44715,
-    "volatility_bps": 16.37
-   },
    "20260528": {
     "source": "symstats",
     "num_trades": 13397,
@@ -3251,20 +3177,17 @@
     "avg_mid": 84.082,
     "volatility_bps": 33.46,
     "spread_bps": 3.08
+   },
+   "20260606": {
+    "source": "live",
+    "volume_ntl": 1654238.08,
+    "num_trades": 2014,
+    "avg_mid": 80.9472,
+    "volatility_bps": 18.57,
+    "spread_bps": 1.99
    }
   },
   "xyz:HYUNDAI": {
-   "20260527": {
-    "source": "symstats",
-    "num_trades": 1374,
-    "volume_ntl": 1159842.6,
-    "avg_mid": 457.9525,
-    "spread_bps": 73.94,
-    "med_trade_sz": 0.107,
-    "med_inside_liq": 0.942,
-    "n_midchanges": 8691,
-    "volatility_bps": 17.33
-   },
    "20260528": {
     "source": "symstats",
     "num_trades": 2694,
@@ -3348,6 +3271,14 @@
     "avg_mid": 438.3125,
     "volatility_bps": 38.61,
     "spread_bps": 27.58
+   },
+   "20260606": {
+    "source": "live",
+    "volume_ntl": 170596.75,
+    "num_trades": 577,
+    "avg_mid": 416.9775,
+    "volatility_bps": 26.09,
+    "spread_bps": 45.21
    }
   },
   "xyz:IBM": {
@@ -3396,20 +3327,17 @@
     "avg_mid": 290.3,
     "volatility_bps": 15.42,
     "spread_bps": 14.23
+   },
+   "20260606": {
+    "source": "live",
+    "volume_ntl": 267733.46,
+    "num_trades": 579,
+    "avg_mid": 278.0,
+    "volatility_bps": 12.28,
+    "spread_bps": 13.04
    }
   },
   "xyz:INTC": {
-   "20260527": {
-    "source": "symstats",
-    "num_trades": 31744,
-    "volume_ntl": 48877760.64,
-    "avg_mid": 120.9622,
-    "spread_bps": 2.18,
-    "med_trade_sz": 2.55,
-    "med_inside_liq": 65.84,
-    "n_midchanges": 50799,
-    "volatility_bps": 28.53
-   },
    "20260528": {
     "source": "symstats",
     "num_trades": 24507,
@@ -3505,20 +3433,17 @@
     "avg_mid": 103.3893,
     "volatility_bps": 37.54,
     "spread_bps": 0.91
+   },
+   "20260606": {
+    "source": "live",
+    "volume_ntl": 6726301.04,
+    "num_trades": 9180,
+    "avg_mid": 95.7985,
+    "volatility_bps": 32.89,
+    "spread_bps": 0.74
    }
   },
   "xyz:JP225": {
-   "20260527": {
-    "source": "symstats",
-    "num_trades": 4503,
-    "volume_ntl": 1015144.88,
-    "avg_mid": 65203.5042,
-    "spread_bps": 16.31,
-    "med_trade_sz": 0.0002,
-    "med_inside_liq": 0.0405,
-    "n_midchanges": 12920,
-    "volatility_bps": 11.47
-   },
    "20260528": {
     "source": "symstats",
     "num_trades": 1516,
@@ -3602,20 +3527,17 @@
     "avg_mid": 64914.25,
     "volatility_bps": 11.1,
     "spread_bps": 19.16
+   },
+   "20260606": {
+    "source": "live",
+    "volume_ntl": 141343.4,
+    "num_trades": 253,
+    "avg_mid": 64800.75,
+    "volatility_bps": 21.55,
+    "spread_bps": 54.08
    }
   },
   "xyz:JPY": {
-   "20260527": {
-    "source": "symstats",
-    "num_trades": 951,
-    "volume_ntl": 3230246.28,
-    "avg_mid": 159.3358,
-    "spread_bps": 2.38,
-    "med_trade_sz": 9.86,
-    "med_inside_liq": 71.21,
-    "n_midchanges": 5029,
-    "volatility_bps": 0.53
-   },
    "20260528": {
     "source": "symstats",
     "num_trades": 543,
@@ -3699,20 +3621,17 @@
     "avg_mid": 160.0275,
     "volatility_bps": 1.42,
     "spread_bps": 2.72
+   },
+   "20260606": {
+    "source": "live",
+    "volume_ntl": 104733.28,
+    "num_trades": 92,
+    "avg_mid": 159.925,
+    "volatility_bps": 1.52,
+    "spread_bps": 8.76
    }
   },
   "xyz:KR200": {
-   "20260527": {
-    "source": "symstats",
-    "num_trades": 1072,
-    "volume_ntl": 566779.63,
-    "avg_mid": 1307.0163,
-    "spread_bps": 49.77,
-    "med_trade_sz": 0.1,
-    "med_inside_liq": 0.1816,
-    "n_midchanges": 6377,
-    "volatility_bps": 11.19
-   },
    "20260528": {
     "source": "symstats",
     "num_trades": 3988,
@@ -3796,20 +3715,17 @@
     "avg_mid": 1268.05,
     "volatility_bps": 44.97,
     "spread_bps": 119.71
+   },
+   "20260606": {
+    "source": "live",
+    "volume_ntl": 34169.14,
+    "num_trades": 149,
+    "avg_mid": 1201.075,
+    "volatility_bps": 40.49,
+    "spread_bps": 123.81
    }
   },
   "xyz:LITE": {
-   "20260527": {
-    "source": "symstats",
-    "num_trades": 9312,
-    "volume_ntl": 6020197.97,
-    "avg_mid": 900.6057,
-    "spread_bps": 11.4,
-    "med_trade_sz": 0.211,
-    "med_inside_liq": 1.8,
-    "n_midchanges": 41071,
-    "volatility_bps": 27.46
-   },
    "20260528": {
     "source": "symstats",
     "num_trades": 7967,
@@ -3905,20 +3821,17 @@
     "avg_mid": 897.665,
     "volatility_bps": 43.74,
     "spread_bps": 6.55
+   },
+   "20260606": {
+    "source": "live",
+    "volume_ntl": 471394.7,
+    "num_trades": 977,
+    "avg_mid": 837.825,
+    "volatility_bps": 23.9,
+    "spread_bps": 1.57
    }
   },
   "xyz:LLY": {
-   "20260527": {
-    "source": "symstats",
-    "num_trades": 3474,
-    "volume_ntl": 4594949.23,
-    "avg_mid": 1076.252,
-    "spread_bps": 31.09,
-    "med_trade_sz": 0.044,
-    "med_inside_liq": 3.9193,
-    "n_midchanges": 9606,
-    "volatility_bps": 16.57
-   },
    "20260528": {
     "source": "symstats",
     "num_trades": 3822,
@@ -4002,20 +3915,17 @@
     "avg_mid": 1133.125,
     "volatility_bps": 17.14,
     "spread_bps": 19.21
+   },
+   "20260606": {
+    "source": "live",
+    "volume_ntl": 356038.26,
+    "num_trades": 619,
+    "avg_mid": 1118.375,
+    "volatility_bps": 7.96,
+    "spread_bps": 11.64
    }
   },
   "xyz:META": {
-   "20260527": {
-    "source": "symstats",
-    "num_trades": 13481,
-    "volume_ntl": 30754108.44,
-    "avg_mid": 620.4122,
-    "spread_bps": 3.5,
-    "med_trade_sz": 0.575,
-    "med_inside_liq": 16.08,
-    "n_midchanges": 30500,
-    "volatility_bps": 12.55
-   },
    "20260528": {
     "source": "symstats",
     "num_trades": 11312,
@@ -4111,20 +4021,17 @@
     "avg_mid": 606.2125,
     "volatility_bps": 15.36,
     "spread_bps": 1.19
+   },
+   "20260606": {
+    "source": "live",
+    "volume_ntl": 556070.97,
+    "num_trades": 1807,
+    "avg_mid": 588.2525,
+    "volatility_bps": 7.51,
+    "spread_bps": 2.89
    }
   },
   "xyz:MRVL": {
-   "20260527": {
-    "source": "symstats",
-    "num_trades": 29521,
-    "volume_ntl": 28847043.04,
-    "avg_mid": 206.5388,
-    "spread_bps": 7.75,
-    "med_trade_sz": 1.16,
-    "med_inside_liq": 10.8,
-    "n_midchanges": 61944,
-    "volatility_bps": 65.41
-   },
    "20260528": {
     "source": "symstats",
     "num_trades": 17859,
@@ -4220,20 +4127,17 @@
     "avg_mid": 285.95,
     "volatility_bps": 81.69,
     "spread_bps": 3.69
+   },
+   "20260606": {
+    "source": "live",
+    "volume_ntl": 14900209.09,
+    "num_trades": 13377,
+    "avg_mid": 267.615,
+    "volatility_bps": 81.56,
+    "spread_bps": 5.59
    }
   },
   "xyz:MSFT": {
-   "20260527": {
-    "source": "symstats",
-    "num_trades": 5459,
-    "volume_ntl": 6434211.34,
-    "avg_mid": 413.8352,
-    "spread_bps": 2.79,
-    "med_trade_sz": 0.483,
-    "med_inside_liq": 9.967,
-    "n_midchanges": 33038,
-    "volatility_bps": 6.31
-   },
    "20260528": {
     "source": "symstats",
     "num_trades": 9799,
@@ -4329,20 +4233,17 @@
     "avg_mid": 420.98,
     "volatility_bps": 11.09,
     "spread_bps": 1.41
+   },
+   "20260606": {
+    "source": "live",
+    "volume_ntl": 1248413.76,
+    "num_trades": 2026,
+    "avg_mid": 411.5075,
+    "volatility_bps": 8.43,
+    "spread_bps": 0.97
    }
   },
   "xyz:MSTR": {
-   "20260527": {
-    "source": "symstats",
-    "num_trades": 8738,
-    "volume_ntl": 11363373.88,
-    "avg_mid": 155.7917,
-    "spread_bps": 4.52,
-    "med_trade_sz": 1.597,
-    "med_inside_liq": 34.194,
-    "n_midchanges": 30256,
-    "volatility_bps": 16.84
-   },
    "20260528": {
     "source": "symstats",
     "num_trades": 10119,
@@ -4438,20 +4339,17 @@
     "avg_mid": 123.155,
     "volatility_bps": 45.77,
     "spread_bps": 2.51
+   },
+   "20260606": {
+    "source": "live",
+    "volume_ntl": 1034407.0,
+    "num_trades": 2290,
+    "avg_mid": 119.525,
+    "volatility_bps": 33.26,
+    "spread_bps": 5.92
    }
   },
   "xyz:MU": {
-   "20260527": {
-    "source": "symstats",
-    "num_trades": 184751,
-    "volume_ntl": 418933975.8,
-    "avg_mid": 925.2014,
-    "spread_bps": 1.62,
-    "med_trade_sz": 0.341,
-    "med_inside_liq": 12.283,
-    "n_midchanges": 122475,
-    "volatility_bps": 59.28
-   },
    "20260528": {
     "source": "symstats",
     "num_trades": 106282,
@@ -4535,20 +4433,17 @@
     "avg_mid": 916.0875,
     "volatility_bps": 60.66,
     "spread_bps": 1.25
+   },
+   "20260606": {
+    "source": "live",
+    "volume_ntl": 18862355.38,
+    "num_trades": 22708,
+    "avg_mid": 855.28,
+    "volatility_bps": 44.14,
+    "spread_bps": 2.58
    }
   },
   "xyz:NATGAS": {
-   "20260527": {
-    "source": "symstats",
-    "num_trades": 12825,
-    "volume_ntl": 13514616.01,
-    "avg_mid": 3.0646,
-    "spread_bps": 1.96,
-    "med_trade_sz": 185.0,
-    "med_inside_liq": 1925.5,
-    "n_midchanges": 30131,
-    "volatility_bps": 13.53
-   },
    "20260528": {
     "source": "symstats",
     "num_trades": 11939,
@@ -4632,20 +4527,17 @@
     "avg_mid": 3.2914,
     "volatility_bps": 13.65,
     "spread_bps": 1.15
+   },
+   "20260606": {
+    "source": "live",
+    "volume_ntl": 421031.57,
+    "num_trades": 879,
+    "avg_mid": 3.2385,
+    "volatility_bps": 11.09,
+    "spread_bps": 1.24
    }
   },
   "xyz:NFLX": {
-   "20260527": {
-    "source": "symstats",
-    "num_trades": 533,
-    "volume_ntl": 758826.87,
-    "avg_mid": 87.6,
-    "spread_bps": 10.03,
-    "med_trade_sz": 1.0,
-    "med_inside_liq": 563.33,
-    "n_midchanges": 16414,
-    "volatility_bps": 2.17
-   },
    "20260528": {
     "source": "symstats",
     "num_trades": 1043,
@@ -4741,6 +4633,14 @@
     "avg_mid": 81.8083,
     "volatility_bps": 4.63,
     "spread_bps": 13.15
+   },
+   "20260606": {
+    "source": "live",
+    "volume_ntl": 70387.55,
+    "num_trades": 94,
+    "avg_mid": 81.7023,
+    "volatility_bps": 4.54,
+    "spread_bps": 15.69
    }
   },
   "xyz:NOW": {
@@ -4764,20 +4664,17 @@
     "avg_mid": 116.605,
     "volatility_bps": 21.73,
     "spread_bps": 17.99
+   },
+   "20260606": {
+    "source": "live",
+    "volume_ntl": 12194.31,
+    "num_trades": 77,
+    "avg_mid": 111.445,
+    "volatility_bps": 2.25,
+    "spread_bps": 42.18
    }
   },
   "xyz:NVDA": {
-   "20260527": {
-    "source": "symstats",
-    "num_trades": 42345,
-    "volume_ntl": 86037819.2,
-    "avg_mid": 212.8637,
-    "spread_bps": 1.01,
-    "med_trade_sz": 2.36,
-    "med_inside_liq": 56.006,
-    "n_midchanges": 43820,
-    "volatility_bps": 13.39
-   },
    "20260528": {
     "source": "symstats",
     "num_trades": 31902,
@@ -4873,20 +4770,17 @@
     "avg_mid": 210.4425,
     "volatility_bps": 19.24,
     "spread_bps": 0.65
+   },
+   "20260606": {
+    "source": "live",
+    "volume_ntl": 10836785.28,
+    "num_trades": 11030,
+    "avg_mid": 203.3225,
+    "volatility_bps": 20.16,
+    "spread_bps": 0.49
    }
   },
   "xyz:ORCL": {
-   "20260527": {
-    "source": "symstats",
-    "num_trades": 3908,
-    "volume_ntl": 5358590.76,
-    "avg_mid": 191.0886,
-    "spread_bps": 5.9,
-    "med_trade_sz": 2.597,
-    "med_inside_liq": 82.374,
-    "n_midchanges": 18346,
-    "volatility_bps": 10.22
-   },
    "20260528": {
     "source": "symstats",
     "num_trades": 10124,
@@ -4982,20 +4876,17 @@
     "avg_mid": 222.825,
     "volatility_bps": 28.09,
     "spread_bps": 2.02
+   },
+   "20260606": {
+    "source": "live",
+    "volume_ntl": 2297290.55,
+    "num_trades": 2887,
+    "avg_mid": 208.955,
+    "volatility_bps": 29.07,
+    "spread_bps": 2.4
    }
   },
   "xyz:PALLADIUM": {
-   "20260527": {
-    "source": "symstats",
-    "num_trades": 1717,
-    "volume_ntl": 633785.23,
-    "avg_mid": 1385.3244,
-    "spread_bps": 9.04,
-    "med_trade_sz": 0.0575,
-    "med_inside_liq": 1.1338,
-    "n_midchanges": 23571,
-    "volatility_bps": 6.26
-   },
    "20260528": {
     "source": "symstats",
     "num_trades": 1317,
@@ -5079,20 +4970,17 @@
     "avg_mid": 1269.475,
     "volatility_bps": 10.0,
     "spread_bps": 6.96
+   },
+   "20260606": {
+    "source": "live",
+    "volume_ntl": 40589.31,
+    "num_trades": 251,
+    "avg_mid": 1208.4,
+    "volatility_bps": 10.72,
+    "spread_bps": 6.64
    }
   },
   "xyz:PLATINUM": {
-   "20260527": {
-    "source": "symstats",
-    "num_trades": 4708,
-    "volume_ntl": 1257676.16,
-    "avg_mid": 1926.1683,
-    "spread_bps": 4.57,
-    "med_trade_sz": 0.068,
-    "med_inside_liq": 2.8751,
-    "n_midchanges": 23737,
-    "volatility_bps": 10.77
-   },
    "20260528": {
     "source": "symstats",
     "num_trades": 8291,
@@ -5176,20 +5064,17 @@
     "avg_mid": 1838.075,
     "volatility_bps": 13.35,
     "spread_bps": 5.6
+   },
+   "20260606": {
+    "source": "live",
+    "volume_ntl": 53083.15,
+    "num_trades": 359,
+    "avg_mid": 1777.175,
+    "volatility_bps": 5.03,
+    "spread_bps": 2.26
    }
   },
   "xyz:PLTR": {
-   "20260527": {
-    "source": "symstats",
-    "num_trades": 5452,
-    "volume_ntl": 5187122.07,
-    "avg_mid": 133.8508,
-    "spread_bps": 3.45,
-    "med_trade_sz": 2.209,
-    "med_inside_liq": 32.831,
-    "n_midchanges": 35880,
-    "volatility_bps": 10.69
-   },
    "20260528": {
     "source": "symstats",
     "num_trades": 7569,
@@ -5273,20 +5158,17 @@
     "avg_mid": 137.8,
     "volatility_bps": 16.56,
     "spread_bps": 2.1
+   },
+   "20260606": {
+    "source": "live",
+    "volume_ntl": 919058.05,
+    "num_trades": 2636,
+    "avg_mid": 133.2775,
+    "volatility_bps": 13.01,
+    "spread_bps": 0.75
    }
   },
   "xyz:PURRDAT": {
-   "20260527": {
-    "source": "symstats",
-    "num_trades": 4695,
-    "volume_ntl": 3110472.63,
-    "avg_mid": 8.4512,
-    "spread_bps": 27.37,
-    "med_trade_sz": 48.0,
-    "med_inside_liq": 162.0,
-    "n_midchanges": 8963,
-    "volatility_bps": 25.48
-   },
    "20260528": {
     "source": "symstats",
     "num_trades": 7140,
@@ -5370,15 +5252,17 @@
     "avg_mid": 8.8738,
     "volatility_bps": 93.2,
     "spread_bps": 67.45
+   },
+   "20260606": {
+    "source": "live",
+    "volume_ntl": 103366.35,
+    "num_trades": 291,
+    "avg_mid": 8.6311,
+    "volatility_bps": 26.33,
+    "spread_bps": 38.45
    }
   },
   "xyz:QNT": {
-   "20260527": {
-    "source": "api",
-    "num_trades": 13784,
-    "volume_ntl": 4376266.48,
-    "avg_mid": 82.3475
-   },
    "20260528": {
     "source": "api",
     "num_trades": 13784,
@@ -5442,20 +5326,17 @@
     "avg_mid": 58.1337,
     "volatility_bps": 106.84,
     "spread_bps": 9.61
+   },
+   "20260606": {
+    "source": "live",
+    "volume_ntl": 778326.48,
+    "num_trades": 1000,
+    "avg_mid": 53.8068,
+    "volatility_bps": 44.59,
+    "spread_bps": 31.43
    }
   },
   "xyz:RIVN": {
-   "20260527": {
-    "source": "symstats",
-    "num_trades": 912,
-    "volume_ntl": 1851901.64,
-    "avg_mid": 14.6435,
-    "spread_bps": 13.36,
-    "med_trade_sz": 9.23,
-    "med_inside_liq": 2171.74,
-    "n_midchanges": 8923,
-    "volatility_bps": 7.21
-   },
    "20260528": {
     "source": "symstats",
     "num_trades": 728,
@@ -5551,20 +5432,17 @@
     "avg_mid": 17.1475,
     "volatility_bps": 6.38,
     "spread_bps": 20.1
+   },
+   "20260606": {
+    "source": "live",
+    "volume_ntl": 44166.06,
+    "num_trades": 91,
+    "avg_mid": 16.088,
+    "volatility_bps": 12.53,
+    "spread_bps": 62.19
    }
   },
   "xyz:RKLB": {
-   "20260527": {
-    "source": "symstats",
-    "num_trades": 17277,
-    "volume_ntl": 14701052.97,
-    "avg_mid": 148.8953,
-    "spread_bps": 8.84,
-    "med_trade_sz": 1.62,
-    "med_inside_liq": 20.71,
-    "n_midchanges": 43498,
-    "volatility_bps": 45.24
-   },
    "20260528": {
     "source": "symstats",
     "num_trades": 9405,
@@ -5660,20 +5538,17 @@
     "avg_mid": 114.05,
     "volatility_bps": 41.27,
     "spread_bps": 6.16
+   },
+   "20260606": {
+    "source": "live",
+    "volume_ntl": 1812389.66,
+    "num_trades": 2601,
+    "avg_mid": 103.7555,
+    "volatility_bps": 59.62,
+    "spread_bps": 8.82
    }
   },
   "xyz:SILVER": {
-   "20260527": {
-    "source": "symstats",
-    "num_trades": 191209,
-    "volume_ntl": 185777919.86,
-    "avg_mid": 74.677,
-    "spread_bps": 0.4,
-    "med_trade_sz": 0.69,
-    "med_inside_liq": 207.91,
-    "n_midchanges": 84941,
-    "volatility_bps": 21.51
-   },
    "20260528": {
     "source": "symstats",
     "num_trades": 175121,
@@ -5757,20 +5632,17 @@
     "avg_mid": 70.7655,
     "volatility_bps": 26.2,
     "spread_bps": 0.3
+   },
+   "20260606": {
+    "source": "live",
+    "volume_ntl": 3903282.15,
+    "num_trades": 30523,
+    "avg_mid": 67.807,
+    "volatility_bps": 3.81,
+    "spread_bps": 0.15
    }
   },
   "xyz:SKHX": {
-   "20260527": {
-    "source": "symstats",
-    "num_trades": 48582,
-    "volume_ntl": 33237251.46,
-    "avg_mid": 1514.3272,
-    "spread_bps": 16.85,
-    "med_trade_sz": 0.066,
-    "med_inside_liq": 0.373,
-    "n_midchanges": 46337,
-    "volatility_bps": 76.4
-   },
    "20260528": {
     "source": "symstats",
     "num_trades": 34645,
@@ -5854,20 +5726,17 @@
     "avg_mid": 1320.125,
     "volatility_bps": 69.93,
     "spread_bps": 4.6
+   },
+   "20260606": {
+    "source": "live",
+    "volume_ntl": 2439049.76,
+    "num_trades": 7725,
+    "avg_mid": 1222.275,
+    "volatility_bps": 21.79,
+    "spread_bps": 0.82
    }
   },
   "xyz:SMSN": {
-   "20260527": {
-    "source": "symstats",
-    "num_trades": 11671,
-    "volume_ntl": 7070929.46,
-    "avg_mid": 204.8917,
-    "spread_bps": 21.81,
-    "med_trade_sz": 0.509,
-    "med_inside_liq": 2.944,
-    "n_midchanges": 19451,
-    "volatility_bps": 36.39
-   },
    "20260528": {
     "source": "symstats",
     "num_trades": 10441,
@@ -5951,20 +5820,17 @@
     "avg_mid": 208.115,
     "volatility_bps": 65.74,
     "spread_bps": 6.55
+   },
+   "20260606": {
+    "source": "live",
+    "volume_ntl": 1234019.9,
+    "num_trades": 3000,
+    "avg_mid": 194.3,
+    "volatility_bps": 17.05,
+    "spread_bps": 0.52
    }
   },
   "xyz:SNDK": {
-   "20260527": {
-    "source": "symstats",
-    "num_trades": 62303,
-    "volume_ntl": 110449869.4,
-    "avg_mid": 1588.0778,
-    "spread_bps": 2.11,
-    "med_trade_sz": 0.183,
-    "med_inside_liq": 6.535,
-    "n_midchanges": 79516,
-    "volatility_bps": 42.8
-   },
    "20260528": {
     "source": "symstats",
     "num_trades": 51739,
@@ -6060,20 +5926,17 @@
     "avg_mid": 1628.35,
     "volatility_bps": 45.56,
     "spread_bps": 1.63
+   },
+   "20260606": {
+    "source": "live",
+    "volume_ntl": 3111551.47,
+    "num_trades": 3572,
+    "avg_mid": 1525.85,
+    "volatility_bps": 28.3,
+    "spread_bps": 3.29
    }
   },
   "xyz:SP500": {
-   "20260527": {
-    "source": "symstats",
-    "num_trades": 69314,
-    "volume_ntl": 295147723.23,
-    "avg_mid": 7524.778,
-    "spread_bps": 0.22,
-    "med_trade_sz": 0.066,
-    "med_inside_liq": 14.766,
-    "n_midchanges": 28577,
-    "volatility_bps": 4.41
-   },
    "20260528": {
     "source": "symstats",
     "num_trades": 54400,
@@ -6157,16 +6020,17 @@
     "avg_mid": 7461.9,
     "volatility_bps": 7.6,
     "spread_bps": 0.49
+   },
+   "20260606": {
+    "source": "live",
+    "volume_ntl": 39707927.84,
+    "num_trades": 12654,
+    "avg_mid": 7362.575,
+    "volatility_bps": 9.49,
+    "spread_bps": 0.27
    }
   },
   "xyz:SPCX": {
-   "20260527": {
-    "source": "api",
-    "num_trades": 25139,
-    "volume_ntl": 8177011.36,
-    "avg_mid": 202.5275,
-    "volatility_bps": 15.07
-   },
    "20260528": {
     "source": "api",
     "num_trades": 29293,
@@ -6230,20 +6094,17 @@
     "avg_mid": 170.925,
     "volatility_bps": 55.1,
     "spread_bps": 3.82
+   },
+   "20260606": {
+    "source": "live",
+    "volume_ntl": 2288503.27,
+    "num_trades": 4778,
+    "avg_mid": 165.5125,
+    "volatility_bps": 40.77,
+    "spread_bps": 14.03
    }
   },
   "xyz:TSLA": {
-   "20260527": {
-    "source": "symstats",
-    "num_trades": 27553,
-    "volume_ntl": 33679101.07,
-    "avg_mid": 438.9334,
-    "spread_bps": 1.04,
-    "med_trade_sz": 0.555,
-    "med_inside_liq": 6.135,
-    "n_midchanges": 62453,
-    "volatility_bps": 15.13
-   },
    "20260528": {
     "source": "symstats",
     "num_trades": 17170,
@@ -6327,20 +6188,17 @@
     "avg_mid": 404.9325,
     "volatility_bps": 19.41,
     "spread_bps": 0.71
+   },
+   "20260606": {
+    "source": "live",
+    "volume_ntl": 2765193.64,
+    "num_trades": 5758,
+    "avg_mid": 389.805,
+    "volatility_bps": 17.19,
+    "spread_bps": 0.26
    }
   },
   "xyz:TSM": {
-   "20260527": {
-    "source": "symstats",
-    "num_trades": 11776,
-    "volume_ntl": 9702033.57,
-    "avg_mid": 421.3421,
-    "spread_bps": 5.54,
-    "med_trade_sz": 0.559,
-    "med_inside_liq": 26.732,
-    "n_midchanges": 34794,
-    "volatility_bps": 18.43
-   },
    "20260528": {
     "source": "symstats",
     "num_trades": 6672,
@@ -6436,20 +6294,17 @@
     "avg_mid": 424.025,
     "volatility_bps": 18.95,
     "spread_bps": 6.05
+   },
+   "20260606": {
+    "source": "live",
+    "volume_ntl": 6098032.99,
+    "num_trades": 5173,
+    "avg_mid": 405.905,
+    "volatility_bps": 26.93,
+    "spread_bps": 10.96
    }
   },
   "xyz:URNM": {
-   "20260527": {
-    "source": "symstats",
-    "num_trades": 890,
-    "volume_ntl": 387608.16,
-    "avg_mid": 60.6729,
-    "spread_bps": 36.08,
-    "med_trade_sz": 1.43,
-    "med_inside_liq": 4.12,
-    "n_midchanges": 18515,
-    "volatility_bps": 6.91
-   },
    "20260528": {
     "source": "symstats",
     "num_trades": 873,
@@ -6533,20 +6388,17 @@
     "avg_mid": 58.5245,
     "volatility_bps": 19.82,
     "spread_bps": 36.36
+   },
+   "20260606": {
+    "source": "live",
+    "volume_ntl": 5771.92,
+    "num_trades": 66,
+    "avg_mid": 55.1968,
+    "volatility_bps": 5.03,
+    "spread_bps": 52.92
    }
   },
   "xyz:USAR": {
-   "20260527": {
-    "source": "symstats",
-    "num_trades": 2813,
-    "volume_ntl": 4445647.64,
-    "avg_mid": 27.0415,
-    "spread_bps": 16.99,
-    "med_trade_sz": 6.89,
-    "med_inside_liq": 368.73,
-    "n_midchanges": 23805,
-    "volatility_bps": 20.83
-   },
    "20260528": {
     "source": "symstats",
     "num_trades": 2985,
@@ -6642,20 +6494,17 @@
     "avg_mid": 24.7675,
     "volatility_bps": 20.99,
     "spread_bps": 28.27
+   },
+   "20260606": {
+    "source": "live",
+    "volume_ntl": 531727.49,
+    "num_trades": 1189,
+    "avg_mid": 22.7653,
+    "volatility_bps": 25.88,
+    "spread_bps": 12.85
    }
   },
   "xyz:XLE": {
-   "20260527": {
-    "source": "symstats",
-    "num_trades": 2155,
-    "volume_ntl": 835354.95,
-    "avg_mid": 57.3231,
-    "spread_bps": 21.51,
-    "med_trade_sz": 0.2,
-    "med_inside_liq": 14.35,
-    "n_midchanges": 8746,
-    "volatility_bps": 5.96
-   },
    "20260528": {
     "source": "symstats",
     "num_trades": 858,
@@ -6751,20 +6600,17 @@
     "avg_mid": 58.274,
     "volatility_bps": 5.53,
     "spread_bps": 95.4
+   },
+   "20260606": {
+    "source": "live",
+    "volume_ntl": 7073.13,
+    "num_trades": 14,
+    "avg_mid": 58.0812,
+    "volatility_bps": 3.43,
+    "spread_bps": 70.37
    }
   },
   "xyz:XYZ100": {
-   "20260527": {
-    "source": "symstats",
-    "num_trades": 90248,
-    "volume_ntl": 303840495.37,
-    "avg_mid": 30012.3078,
-    "spread_bps": 0.41,
-    "med_trade_sz": 0.004,
-    "med_inside_liq": 6.4207,
-    "n_midchanges": 27154,
-    "volatility_bps": 7.41
-   },
    "20260528": {
     "source": "symstats",
     "num_trades": 76735,
@@ -6848,20 +6694,17 @@
     "avg_mid": 28894.0,
     "volatility_bps": 12.97,
     "spread_bps": 0.35
+   },
+   "20260606": {
+    "source": "live",
+    "volume_ntl": 20394911.08,
+    "num_trades": 14219,
+    "avg_mid": 28776.25,
+    "volatility_bps": 16.78,
+    "spread_bps": 0.35
    }
   },
   "xyz:ZM": {
-   "20260527": {
-    "source": "symstats",
-    "num_trades": 1985,
-    "volume_ntl": 945231.82,
-    "avg_mid": 100.4395,
-    "spread_bps": 26.45,
-    "med_trade_sz": 0.307,
-    "med_inside_liq": 39.807,
-    "n_midchanges": 11691,
-    "volatility_bps": 12.74
-   },
    "20260528": {
     "source": "symstats",
     "num_trades": 753,
@@ -6957,8 +6800,16 @@
     "avg_mid": 103.255,
     "volatility_bps": 3.42,
     "spread_bps": 55.17
+   },
+   "20260606": {
+    "source": "live",
+    "volume_ntl": 676.97,
+    "num_trades": 3,
+    "avg_mid": 100.515,
+    "volatility_bps": 0.39,
+    "spread_bps": 59.68
    }
   }
  },
- "lastUpdated": "2026-06-05T23:45:07.915881-04:00"
+ "lastUpdated": "2026-06-06T00:03:18.616574-04:00"
 }
